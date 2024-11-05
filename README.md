@@ -1,5 +1,5 @@
 # tronusdt
-USDT钱包和收款的快速开发，涵盖转账\回调的Web接口  
+USDT钱包和收款的快速开发，涵盖转账\回调的Web接口，支持Python\JAVA\NODEJS\PHP\GO\易语言等等。  
 目前提供了PHP源码，即本页中payui.php文件，没错只需要1个文件，200行左右代码，即可运行这个收款系统。
 下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。  
 
@@ -12,8 +12,10 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 ### 快速测试收款效果:
 URL访问以创建支付订单：
->https://tronusdt.xyz/?way=payui  (↑推荐点击此处)    
->https://tronusdt.xyz/?way=payui.php?name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664   (↑直接创建订单并进入支付页)  
+>https://tronusdt.xyz/?way=payui  
+  (↑推荐点击此处)    
+>https://tronusdt.xyz/?way=payui.php?name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664  
+ (↑直接创建订单并进入支付页)  
 
 **参数说明**
 |  参数名   | 说明  | 必须性  |  示例值  |
@@ -25,15 +27,14 @@ URL访问以创建支付订单：
 | jump  | 支付成功后提示的信息或跳转的网址 | 是 | https://baidu.com | 
 
 注意:
-+ 测试时我们建议使用TRX收款测试，它无需手续费，每个TRX价格也不高。
 + name参数的钱包必须为通过tronusdt系统构建的钱包，在页面通过点击创建钱包即可免费获得一个钱包，您可将私钥保存并导入到Imtoken，即可浏览钱包余额并进行转账等其他操作。  
 + jump参数可填写为一个网址，则必须为http开头，它将在收款成功后进行页面跳转。也可填写为一句话或一个商品卡密，它将在收款成功后显示出来。如您不懂此参数可以直接填写-，但不能留空。
 + 您可以将本仓库的payui.php源码复制到您的服务器，自行部署，且可以设置收款成功后自己的业务逻辑，比如支付后发送短信通知等均可以实现（JavaScript处）。
 
-### 我懂其他编程语言，支持JAVA、Python、C++、易语言吗？
+### 我会其他编程语言，怎么构建自己的收款系统？
 您也可以使用Python\JAVA等其他编程语言和平台构建您的USDT收款程序，只需要调用这里提供的2个接口：  
 + 第一个接口是：创建订单。创建成功返回订单号。
-+ 第二个接口是：检查订单是否支付成功。支付成功则自定义一些事情。  
++ 第二个接口是：检查订单是否支付成功。支付成功则自定义一些事情。     
 在整个开发过程中，无法熟悉区块链相关知识，甚至不懂比特币、波场、NFT知识也没关系。   
 您可在1小时内构造出专属于您的收款系统，用您自己熟悉的编程语言。 
 
@@ -44,12 +45,12 @@ URL访问以创建支付订单：
 + 第二种就是使用我们的已有的系统，https://tronusdt.xyz/?way=payui.php?name=.... 拼接您的收款链接，发送给别人进行支付即可。
 
 ### 其他接口说明
-（英文:Access must be done POST and HTTPS.）
+（英文:Access must be done POST and HTTPS.）  
 以下接口均务必**使用HTTPS头并以POST方式访问**，少量同样支持GET。 
 调用速率：每秒15QPS，接口长期稳定可用。
 
-#### 1、实时币价汇率查询API:
-（英文:Real time currency price and exchange rate query interface）  
+#### 1、实时币价汇率查询API:  
+（英文:Real time currency price and exchange rate query interface）   
 > https://usdtxyz.xyz/?way=price&coin=usdt
 
 注意：以POST访问，如果GET访问会提示缺少coin参数(下述接口也一样)。  
@@ -57,13 +58,13 @@ URL访问以创建支付订单：
 其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。  
 
 #### 生成钱包API:
-（英文:To generate a free USDT wallet）
+（英文:To generate a free USDT wallet）  
 > https://tronusdt.xyz/?way=creat  
 记录调用返回的钱包地址、私钥、wcode(后边要用到)。 
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
 
 #### 查看钱包余额等信息API:
-（英文:To query the balance and information of the wallet's various items）
+（英文:To query the balance and information of the wallet's various items）  
 > https://tronusdt.xyz/?way=info&wcode=[wcode]  
 其中wcode是您之前调用way=creat创建钱包时会返回的。 balance_trx表示钱包剩余TRX余额，balance_usdt表示USDT余额，还有其他信息这里不做解释。  
 
@@ -80,8 +81,10 @@ to表示收款人的钱包地址，value表示转账数量，转出手续费0-1T
 > https://tronusdt.xyz/?way=listtrx&wcode=[wcode] (查询TRX交易记录)
 
 #### 针对收款支持的API（Payment and callback APIs）:
-> https://tronusdt.xyz/?way=pay&name=[name]&type=[type]&product=[product]&value=[value]&jump=[jump] (创建一个收款订单，其中name表示收款人钱包地址)    
-> https://tronusdt.xyz/?way=paycheck&oid=[oid] (传入订单号判断是否支付成功)  
+> https://tronusdt.xyz/?way=pay&name=[name]&type=[type]&product=[product]&value=[value]&jump=[jump]  
+(↑创建一个收款订单，其中name表示收款人钱包地址)     
+> https://tronusdt.xyz/?way=paycheck&oid=[oid]  
+ (↑传入订单号判断是否支付成功)   
 way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果成功支付返回的status会为1。若为0表示未支付。   
 > https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)  
 
