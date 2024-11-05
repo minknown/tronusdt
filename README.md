@@ -1,6 +1,6 @@
 # tronusdt
 USDT钱包和收款的快速开发，涵盖转账\回调的Web接口，支持Python\JAVA\NODEJS\PHP\GO\易语言等等。  
-目前提供了PHP源码，即本页中payui.php文件，没错只需要1个文件，200行左右代码，即可运行这个收款系统。
+目前提供了PHP源码，即本页中payui.php文件，没错只需要1个文件，20行左右代码，即可运行这个收款系统。
 下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。  
 
 ### 英文说明:
