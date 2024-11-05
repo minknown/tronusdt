@@ -55,7 +55,7 @@ URL访问以创建支付订单：
 
 #### 1、实时币价汇率查询API:  
 （英文:Real time currency price and exchange rate query interface）   
-> https://usdtxyz.xyz/?way=price&coin=btc
+> https://tronusdt.xyz/?way=price&coin=btc
 
 注意：以POST访问，如果GET访问会提示缺少coin参数(下述接口也一样)。  
 ![a.png](./images/a.png)  
@@ -67,6 +67,11 @@ URL访问以创建支付订单：
 > https://tronusdt.xyz/?way=creat  
 记录调用返回的钱包地址、私钥、wcode(后边要用到）。 
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
+**生成的私钥记录下来，可以用于自动收款，也可以在imtoken、Bestwallet、币安等其他著名的数字货币钱包上导入，即可图形界面上操作钱包，查看余额，转账交易等。**
+>https://imtoken.im (中国大陆可能打不开，打开后下载新建钱包，导入密钥即可使用)  
+>https://bestwallet.com/ (打开后下载新建钱包，导入密钥即可使用)  
+本仓库文档有bestwallet的安卓apk安装包。复制到安卓手机即可安装此APP。  
+
 
 #### 查看钱包余额等信息API:
 （英文:To query the balance and information of the wallet's various items）  
