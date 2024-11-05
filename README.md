@@ -3,6 +3,7 @@ USDT钱包和收款的快速开发，涵盖转账\回调的Web接口
 目前提供了PHP源码，即本页中payui.php文件，没错只需要1个文件，200行左右代码，即可运行这个收款系统。
 下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。  
 
+### 英文说明:
 Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
 At present, the PHP source code is provided, which is the payui.exe file on this page. Yes, only one file and about 200 lines of code are needed to run this payment system.   
 The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.  
@@ -11,8 +12,8 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 ### 快速测试收款效果:
 URL访问以创建支付订单：
->https://tronusdt.xyz/?way=payui (推荐点击此处)  
->https://tronusdt.xyz/?way=payui.php?name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664 (直接创建订单并进入支付页)
+>https://tronusdt.xyz/?way=payui  (↑推荐点击此处)    
+>https://tronusdt.xyz/?way=payui.php?name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664   (↑直接创建订单并进入支付页)  
 
 **参数说明**
 |  参数名   | 说明  | 必须性  |  示例值  |
