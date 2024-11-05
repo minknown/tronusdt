@@ -2,6 +2,10 @@
 USDT钱包和收款的快速开发，涵盖转账\回调的Web接口  
 目前提供了PHP源码，即本页中payui.php文件，没错只需要1个文件，200行左右代码，即可运行这个收款系统。
 
+Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
+At present, the PHP source code is provided, which is the payui.exe file on this page. Yes, only one file and about 200 lines of code are needed to run this payment system.   
+If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
+
 ### 快速测试收款效果:
 URL访问以创建支付订单：
 >https://tronusdt.xyz/?way=payui (推荐点击此处)  
@@ -78,5 +82,17 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
 >Email:minknown@foxmail.com
+>USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
+
+#### 免责声明
+1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
+2. 不可用于任何违反中华人民共和国(含台湾省)或使用者所在地区法律法规的用途。  
+3. 因为作者即本人仅完成代码的开发和开源活动(开源即任何人都可以下载使用或修改分发)，从未参与用户的任何运营和盈利活动。  
+4. 且不知晓用户后续将程序源代码用于何种用途，故用户使用过程中所带来的任何法律责任即由用户自己承担。  
+
+#### 警告贴士
+1. 项目中所涉及区块链代币均为学习用途，作者并不赞成区块链所繁衍出代币的金融属性。  
+2. 亦不鼓励和支持任何"挖矿"，"炒币"，"虚拟币ICO"等非法行为。  
+3. 虚拟币市场行为不受监管要求和控制，投资交易需谨慎，仅供学习区块链知识。  
 
 
