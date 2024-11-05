@@ -51,16 +51,17 @@ URL访问以创建支付订单：
 
 #### 1、实时币价汇率查询API:  
 （英文:Real time currency price and exchange rate query interface）   
-> https://usdtxyz.xyz/?way=price&coin=usdt
+> https://usdtxyz.xyz/?way=price&coin=btc
 
 注意：以POST访问，如果GET访问会提示缺少coin参数(下述接口也一样)。  
 ![a.png](./images/a.png)  
-其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。  
+其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。lastPr表示最新人民币价格。    
 
 #### 生成钱包API:
-（英文:To generate a free USDT wallet）  
+（英文:To generate a free USDT wallet）   
+（英文:Here we have obtained the 'wcode' that will be used later）  
 > https://tronusdt.xyz/?way=creat  
-记录调用返回的钱包地址、私钥、wcode(后边要用到)。 
+记录调用返回的钱包地址、私钥、wcode(后边要用到）。 
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
 
 #### 查看钱包余额等信息API:
@@ -89,11 +90,14 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 > https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)  
 
 
-#### 其他功能和API（Need Other...）?
+#### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
 >Email:minknown@foxmail.com  
 >USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
+
+#### 视频教程（Tutorial Video）  
+[Please wait]我们将很快录制针对本项目的视频教程，欢迎投稿。  
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
