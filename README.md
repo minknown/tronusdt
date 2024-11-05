@@ -36,40 +36,47 @@ URL访问以创建支付订单：
 + 第二种就是使用我们的已有的系统，https://tronusdt.xyz/?way=payui.php?name=.... 拼接您的收款链接，发送给别人进行支付即可。
 
 ### 其他接口说明
-以下接口均建议使用HTTPS头并以<font color=red>POST方式访问</font>，少量同样支持GET。
+以下接口均建议使用HTTPS头并以$\color{#FF0000}{POST方式访问}$，少量同样支持GET。  
 调用速率：每秒15QPS，接口长期稳定可用。
 
 #### 1、实时币价汇率查询API:
-> https://usdtxyz.xyz/way=price&coin=usdt
+> https://usdtxyz.xyz/?way=price&coin=usdt
 
 注意：以POST访问，如果GET访问会提示缺少coin参数(下述接口也一样)。  
 ![a.png](./images/a.png)  
 其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。  
 
 #### 生成钱包API:
-> https://tronusdt.xyz/way=creat  
+> https://tronusdt.xyz/?way=creat  
 记录调用返回的钱包地址、私钥、wcode(后边要用到)。 
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
 
 #### 查看钱包余额等信息API:
-> https://tronusdt.xyz/way=info&wcode=[wcode]  
+> https://tronusdt.xyz/?way=info&wcode=[wcode]  
 其中wcode是您之前调用way=creat创建钱包时会返回的。  
 
 #### USDT转账API:
-> https://tronusdt.xyz/way=send&wcode=[wcode]&to=[to]&value=[value]   
+> https://tronusdt.xyz/?way=send&wcode=[wcode]&to=[to]&value=[value]   
 to表示收款人的钱包地址，value表示转账数量，转出手续费8-10TRX。没错，转出USDT消耗的是TRX。  
 
 #### TRX转账API:
-> https://tronusdt.xyz/way=sendtrx&wcode=[wcode]&to=[to]&value=[value]  
+> https://tronusdt.xyz/?way=sendtrx&wcode=[wcode]&to=[to]&value=[value]  
 to表示收款人的钱包地址，value表示转账数量，转出手续费0-1TRX。
 
 #### 查询交易记录API:
-> https://tronusdt.xyz/way=list&wcode=[wcode] (查询USDT交易记录)  
-> https://tronusdt.xyz/way=listtrx&wcode=[wcode] (查询TRX交易记录)
+> https://tronusdt.xyz/?way=list&wcode=[wcode] (查询USDT交易记录)  
+> https://tronusdt.xyz/?way=listtrx&wcode=[wcode] (查询TRX交易记录)
+
+#### 针对收款支持的API:
+> https://tronusdt.xyz/?way=pay&name=[name]&type=[type]&product=[product]&value=[value]&jump=[jump] (创建一个收款订单，其中name表示收款人钱包地址)    
+> https://tronusdt.xyz/?way=paycheck&oid=[oid] (传入订单号判断是否支付成功)  
+way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果成功支付返回的status会为1。若为0表示未支付。  
+
+#### UI-API:
 
 #### 其他功能和API?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
->https://tron.network
+>https://tron.network  
 >Email:minknown@foxmail.com
 
 
