@@ -10,6 +10,9 @@ The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT s
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  
 
+#### 视频教程（Tutorial Video）  
+[Please wait]我们将很快录制针对本项目的视频教程。   
+
 ### 快速测试收款效果:
 URL访问以创建支付订单：
 >https://tronusdt.xyz/?way=payui  
@@ -30,7 +33,8 @@ URL访问以创建支付订单：
 + name参数的钱包必须为通过tronusdt系统构建的钱包，在页面通过点击创建钱包即可免费获得一个钱包，您可将私钥保存并导入到Imtoken，即可浏览钱包余额并进行转账等其他操作。  
 + jump参数可填写为一个网址，则必须为http开头，它将在收款成功后进行页面跳转。也可填写为一句话或一个商品卡密，它将在收款成功后显示出来。如您不懂此参数可以直接填写-，但不能留空。
 + 您可以将本仓库的payui.php源码复制到您的服务器，自行部署，且可以设置收款成功后自己的业务逻辑，比如支付后发送短信通知等均可以实现（JavaScript处）。
-
++ 去中心化链上交易，我们无法控制，放心使用。  
+  
 ### 我会其他编程语言，怎么构建自己的收款系统？
 您也可以使用Python\JAVA等其他编程语言和平台构建您的USDT收款程序，只需要调用这里提供的2个接口：  
 + 第一个接口是：创建订单。创建成功返回订单号。
@@ -89,15 +93,14 @@ to表示收款人的钱包地址，value表示转账数量，转出手续费0-1T
 way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果成功支付返回的status会为1。若为0表示未支付。   
 > https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)  
 
+#### 电报版本（Telegram Version） 
+电报机器人Telegram版本可联系我索要源码。  
 
 #### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
 >Email:minknown@foxmail.com  
 >USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
-
-#### 视频教程（Tutorial Video）  
-[Please wait]我们将很快录制针对本项目的视频教程，欢迎投稿。  
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
