@@ -36,7 +36,7 @@ URL访问以创建支付订单：
 + 第二种就是使用我们的已有的系统，https://tronusdt.xyz/?way=payui.php?name=....拼接您的收款链接，发送给别人进行支付即可。
 
 ### 其他接口说明
-以下接口均建议使用HTTPS头并以POST方式访问，少量同样支持GET。
+以下接口均建议使用HTTPS头并以<font color=red>POST方式访问</font>，少量同样支持GET。
 调用速率：每秒15QPS，接口长期稳定可用。
 
 #### 1、实时币价汇率查询API:
@@ -47,22 +47,26 @@ URL访问以创建支付订单：
 其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。  
 
 #### 生成钱包API:
-> https://usdtxyz.xyz/way=creat
-记录调用返回的钱包地址、私钥、wcode(后边要用到)。
-此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。   
+> https://tronusdt.xyz/way=creat  
+记录调用返回的钱包地址、私钥、wcode(后边要用到)。 
+此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
 
 #### 查看钱包余额等信息API:
-> https://usdtxyz.xyz/way=info&wcode=[wcode]
-其中wcode是您之前调用way=creat创建钱包时会返回的。
+> https://tronusdt.xyz/way=info&wcode=[wcode]  
+其中wcode是您之前调用way=creat创建钱包时会返回的。  
 
 #### USDT转账API:
-> https://usdtxyz.xyz/way=send&wcode=[wcode]&to=[to]&value=[value] 
-to表示收款人的钱包地址，value表示转账数量，转出手续费8-10TRX。没错，转出USDT消耗的是TRX。
+> https://tronusdt.xyz/way=send&wcode=[wcode]&to=[to]&value=[value]   
+to表示收款人的钱包地址，value表示转账数量，转出手续费8-10TRX。没错，转出USDT消耗的是TRX。  
 
 #### TRX转账API:
-> https://usdtxyz.xyz/way=sendtrx&wcode=[wcode]&to=[to]&value=[value]
+> https://tronusdt.xyz/way=sendtrx&wcode=[wcode]&to=[to]&value=[value]  
 to表示收款人的钱包地址，value表示转账数量，转出手续费0-1TRX。
 
 #### 查询交易记录API:
-> https://usdtxyz.xyz/way=list&wcode=[wcode] (查询USDT交易记录)
-> https://usdtxyz.xyz/way=listtrx&wcode=[wcode] (查询TRX交易记录)
+> https://tronusdt.xyz/way=list&wcode=[wcode] (查询USDT交易记录)  
+> https://tronusdt.xyz/way=listtrx&wcode=[wcode] (查询TRX交易记录)
+
+#### 其他功能和API?
+如果上述接口没有满足您的需求，可以访问TRON的官方提供API开放文档自行开发接入。
+>https://tron.network
