@@ -40,18 +40,29 @@ URL访问以创建支付订单：
 调用速率：每秒15QPS，接口长期稳定可用。
 
 #### 1、实时币价汇率查询API:
->https://usdtxyz.xyz/way=price&coin=usdt
-注意：以POST访问，如果GET访问会提示缺少coin参数。
-![a.png](./images/a.png)
-其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。
+> https://usdtxyz.xyz/way=price&coin=usdt
+
+注意：以POST访问，如果GET访问会提示缺少coin参数(下述接口也一样)。  
+![a.png](./images/a.png)  
+其中high24h代表24小时内最高成交价格，change24h代表24小时涨幅等信息。  
 
 #### 生成钱包API:
+> https://usdtxyz.xyz/way=creat
+记录调用返回的钱包地址、私钥、wcode(后边要用到)。
+此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。   
 
 #### 查看钱包余额等信息API:
+> https://usdtxyz.xyz/way=info&wcode=[wcode]
+其中wcode是您之前调用way=creat创建钱包时会返回的。
 
 #### USDT转账API:
+> https://usdtxyz.xyz/way=send&wcode=[wcode]&to=[to]&value=[value] 
+to表示收款人的钱包地址，value表示转账数量，转出手续费8-10TRX。没错，转出USDT消耗的是TRX。
 
 #### TRX转账API:
+> https://usdtxyz.xyz/way=sendtrx&wcode=[wcode]&to=[to]&value=[value]
+to表示收款人的钱包地址，value表示转账数量，转出手续费0-1TRX。
 
 #### 查询交易记录API:
-
+> https://usdtxyz.xyz/way=list&wcode=[wcode] (查询USDT交易记录)
+> https://usdtxyz.xyz/way=listtrx&wcode=[wcode] (查询TRX交易记录)
