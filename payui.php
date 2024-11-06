@@ -66,7 +66,7 @@ span{
 }
 
 </style>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 
 <script>
 //解释
