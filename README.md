@@ -11,7 +11,7 @@ If you are a user from the United States and Europe, we recommend that you use w
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  
 
 #### 视频教程（Tutorial Video）  
-[Please wait]我们将很快录制针对本项目的视频教程。   
+<video src="https://mayizt.com/other_fun/tron.mp4"></video>
 
 ### 快速测试收款效果:
 URL访问以创建支付订单：
