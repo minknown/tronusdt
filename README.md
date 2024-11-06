@@ -12,6 +12,10 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 #### 视频教程（Tutorial Video）  
 [点此在线播放视频教程](https://mayizt.com/other_fun/tron.mp4)
+视频教程分为:接口说明、PHP、易语言、Python构建USDT收款源码、将密钥导入APP使用方法、尾数叠加解释等问题解答。
+|  编程语言  | 说明  | 必须性  |  示例值  |
+|  提供源码  | ----  |   ----  |  ----  |
+
 
 ### 快速测试收款效果:
 URL访问以创建支付订单：
