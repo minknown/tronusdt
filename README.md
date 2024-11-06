@@ -17,7 +17,7 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 URL访问以创建支付订单：
 >https://tronusdt.xyz/?way=payui  
   (↑推荐点击此处)    
->https://tronusdt.xyz/?way=pay&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664  
+>https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_vip&value=2&jump=3421664  
  (↑直接创建订单并进入支付页)  
 
 **参数说明**
