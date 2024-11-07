@@ -12,6 +12,8 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 #### 视频教程（Tutorial Video）  
 [点此在线播放视频教程](https://mayizt.com/other_fun/tron.mp4)  
+[我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
+
 视频教程分为:支付接口讲解、将密钥导入APP使用方法、尾数叠加解释等问题解答。易语言的可自行跳过。    
 
 |  编程语言   | PHP  | JavaScript  |  Python  |  Java  |  Go  |  C++  |
