@@ -5,6 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 $ser="https://tronusdt.xyz";//API地址
 $page="payui.php";//本页文件名
 $limit=60*15;//限时支付秒数
+$wallet="TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG";//默认的填写进去的收款地址。可以为空
 //AJAX请求在手机端且本地端可能受到影响,点击paycheck无反应。请转移到线上环境即可。
 ?>
 <!DOCTYPE html>
@@ -119,7 +120,6 @@ function paycheck(the_oid){
 	
 	
 }
-		
 function buyusdt(ys){
 	var net=ys.value;
 	var buyurl="";
@@ -180,7 +180,8 @@ if($name!=""){
 	//获得支付的二维码图片
 	$base64="data:image/png;base64,".$res['qrcode'];
 	//显示支付界面内容
-	echo "<h3>购买[".$res['product']."]</h3><div style='text-align:center'><p>支付:<b style='color:red;font-size:26px'>".$res['value']."</b>个".strtoupper($res['type'])."<br><b style='font-size:12px'>(支付时必须含小数,我们通过小数点累加区分订单支付者)</b><br><b style='font-size:12px'>转入地址:<b style='color:green'>".$res['name']."</b></b></p>";
+	$scoin=strtoupper($res['type'])=="USDT"?"USDT<span style='display:inline;color:gray;font-size:10px'>(TRC20)</span>":"TRX";
+	echo "<h3>购买[".$res['product']."]</h3><div style='text-align:center'><p>支付:<b style='color:red;font-size:26px'>".$res['value']."</b>个".$scoin."<br><b style='font-size:12px'>(支付时必须含小数,我们通过小数点累加区分订单支付者)</b><br><b style='font-size:12px'>转入地址:<b style='color:green'>".$res['name']."</b></b></p>";
 	echo "<img src='".$base64."' alt='支付二维码加载...' style='width:200px'><p style='font-size:13px;color:gray'>订单编号:".$res['oid'].",公告信息:".$res['ad']."<br>务必需在<span id='sd' style='display:inline;color:red'>5分钟</span>内支付,超时和关闭本页失效。</p><input type='submit' onclick='paycheck(".$res['oid'].")' value='我已经支付'><input type='submit' onclick='history.go(-1)' value='重新下单' style='background-color:black;color:white'>";
 	if($_GET['type']=="usdt"){
 		echo "<select style='text-align:center' onchange='buyusdt(this)'>";
@@ -194,6 +195,7 @@ if($name!=""){
 	}
 	"</div>";
 	//exit()表示后边的内容不显示了，到此为止。
+	
 	exit();
 }
 
@@ -206,7 +208,7 @@ if($name!=""){
 
     <label for="name">收款账号(USDT-TRC20/TRX地址)</label>
 	<span>[注意]该钱包必须为此系统创建过 <a href='javascript:note()'>什么意思?</a> | <a style='color:green' href='javascript:creat();'>点此创建一个</a></span>
-    <input type="text" id="name" name="name" placeholder="Your tron address..">
+    <input type="text" id="name" name="name" placeholder="Your tron address.." value="<?php echo $wallet;?>">
 	<label for="type">支付币种</label>
 	<select id="type" name="type">
 	  <option value="usdt">USDT</option>
