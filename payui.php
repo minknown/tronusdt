@@ -159,7 +159,18 @@ if($name!=""){
 	$base64="data:image/png;base64,".$res['qrcode'];
 	//显示支付界面内容
 	echo "<h3>购买[".$res['product']."]</h3><div style='text-align:center'><p>支付:<b style='color:red;font-size:26px'>".$res['value']."</b>个".strtoupper($res['type'])."<br><b style='font-size:12px'>(支付时必须含小数,我们通过小数点累加区分订单支付者)</b><br><b style='font-size:12px'>转入地址:<b style='color:green'>".$res['name']."</b></b></p>";
-	echo "<img src='".$base64."' alt='支付二维码加载...' style='width:200px'><p style='font-size:13px;color:gray'>订单编号:".$res['oid'].",公告信息:".$res['ad']."<br>务必需在<span id='sd' style='display:inline;color:red'>5分钟</span>内支付,超时和关闭本页失效。</p><input type='submit' onclick='paycheck(".$res['oid'].")' value='我已经支付'><input type='submit' onclick='history.go(-1)' value='重新下单' style='background-color:black;color:white'></div>";
+	echo "<img src='".$base64."' alt='支付二维码加载...' style='width:200px'><p style='font-size:13px;color:gray'>订单编号:".$res['oid'].",公告信息:".$res['ad']."<br>务必需在<span id='sd' style='display:inline;color:red'>5分钟</span>内支付,超时和关闭本页失效。</p><input type='submit' onclick='paycheck(".$res['oid'].")' value='我已经支付'><input type='submit' onclick='history.go(-1)' value='重新下单' style='background-color:black;color:white'>";
+	if($_GET['type']=="usdt"){
+		echo "<select style='text-align:center' onchange='buyusdt(this)'>";
+		echo "<option value='none'>没有USDT?点此去购买USDT（支持信用卡等多种方式）</option>";
+		echo "<option value='moonpay'>去moonpay平台购买USDT(推荐)</option>";
+		echo "<option value='changenow'>去Changenow平台购买USDT(推荐)</option>";
+		echo "<option value='binance'>去币安平台购买USDT(推荐)</option>";
+		echo "<option value='nexo'>去nexo平台购买USDT</option>";
+		echo "<option value='transak'>去transak平台购买USDT</option>";
+		echo "</select>";
+	}
+	"</div>";
 	//exit()表示后边的内容不显示了，到此为止。
 	exit();
 }
