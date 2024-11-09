@@ -119,6 +119,28 @@ function paycheck(the_oid){
 	
 	
 }
+		
+function buyusdt(ys){
+	var net=ys.value;
+	var buyurl="";
+	if(net=="moonpay"){
+		buyurl="https://www.moonpay.com/buy/usdt"
+	}
+	if(net=="changenow"){
+		buyurl="https://changenow.io/zh?from=usd&to=usdttrc20&fiatMode=true";
+	}
+	if(net=="nexo"){
+		buyurl="https://nexo.com/zh/buy-tether-usdt"
+	}
+	if(net=="transak"){
+		buyurl="https://transak.com/buy/usdt";
+	}
+	if(net=="binance"){
+		buyurl="https://www.binance.com";
+	}
+	window.open(buyurl);
+	
+}
 </script>
 <body>
 
