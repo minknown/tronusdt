@@ -122,7 +122,7 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 #### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
->Email:ddddddd@foxmail.com  
+>Email:usdtadmin@protonmail.com  
 >USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
 
 #### 免责声明（Disclaimer）
