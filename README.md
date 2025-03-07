@@ -80,7 +80,7 @@ URL访问以创建支付订单：
 （英文:Access must be done POST and HTTPS.）  
 以下接口均务必**使用HTTPS头并以POST方式访问**，少量同样支持GET。 
 调用速率：每秒15QPS，接口长期稳定可用。  
-这就是为什么wcode明明有传入，却一直提示需要传入参数wocde，这是因为你的调用方式为get导致的。  
+这就是为什么wcode明明有传入，却一直提示需要传入参数wcode，这是因为你的调用方式为get导致的。  
 
 #### 1、实时币价汇率查询API:  
 （英文:Real time currency price and exchange rate query interface）   
@@ -131,11 +131,16 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 #### 电报版本（Telegram Version） 
 电报机器人Telegram版本可联系我索要源码。  
 
+#### 域名被墙怎么办（Domain access error...）
+目前我们的域名在美国、日本、韩国、新加坡、非洲、中国等地均能访问，如果访问不了请通过本页底部邮件联系我们获取最新的域名。或者如果只是中国大陆无法访问，请使用代理解决即可。。   
+
 #### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
 >Email:usdtadmin@protonmail.com  
 >USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
+
+
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
