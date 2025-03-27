@@ -61,9 +61,9 @@ auto=yes提供的自动回调并不是实时回调，我们是在创建订单后
 
 **注意:**  
 + name参数的钱包必须为通过tronusdt系统构建的钱包，在页面通过点击创建钱包即可免费获得一个钱包，您可将私钥保存并导入到Imtoken，即可浏览钱包余额并进行转账等其他操作。  
-+ jump参数可填写为一个网址，则必须为http开头，它将在收款成功后进行页面跳转。也可填写为一句话或一个商品卡密，它将在收款成功后显示出来。如您不懂此参数可以直接填写-，但不能留空。
++ jump参数可填写为一个网址，则必须为http开头，它将在收款成功后进行页面跳转，如果您启动auto为回调模式(async/yes)，JUMP则代表后台回调URL。也可填写为一句话或一个商品卡密，它将在收款成功后显示出来。如您不懂此参数可以直接填写-，但不能留空。
 + 您可以将本仓库的payui.php源码复制到您的服务器，自行部署，且可以设置收款成功后自己的业务逻辑，比如支付后发送短信通知等均可以实现（JavaScript处）。
-+ about和service仅对线上接口tronusdt.xyz/?way=payui&name=....&about=...&service=...生效。本源码的payui.php并不提供支持。  
++ about仅做显示，意义不大。service是客服链接，不建议太长的网址或者包含&否则可能报错，建议填写邮箱即可。  
 + 去中心化链上交易，我们无法控制，放心使用。  
   
 ### 我会其他编程语言，怎么构建自己的收款系统？
@@ -129,8 +129,8 @@ to表示收款人的钱包地址，value表示转账数量，转出手续费0-1T
 > https://tronusdt.xyz/?way=paycheck&oid=[oid]  
  (↑传入订单号判断是否支付成功)   
 way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果成功支付返回的status会为1。若为0表示未支付。   
-> https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)  
-
+> https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)    
+> https://tronusdt.xyz/?way=ui (访问将自动跳转到订单后台管理界面)    
 #### 电报版本（Telegram Version） 
 电报机器人Telegram版本可联系我索要源码。  
 
