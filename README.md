@@ -96,7 +96,8 @@ auto=yes提供的自动回调并不是实时回调，我们是在创建订单后
 #### 生成钱包API:
 （英文:To generate a free USDT wallet）   
 （英文:Here we have obtained the 'wcode' that will be used later）  
-> https://tronusdt.xyz/?way=creat  
+> https://tronusdt.xyz/?way=creat&mail=[mail]
+注意：请将上边的[mail]替换为您的电子邮箱地址。此邮箱后续可以登录后台查看所有创建的支付订单。用于管理凭证  
 记录调用返回的钱包地址、私钥、wcode(后边要用到）。 
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。    
 **生成的私钥记录下来，可以用于自动收款，也可以在imtoken、Bestwallet、币安等其他著名的数字货币钱包上导入，即可图形界面上操作钱包，查看余额，转账交易等。**  
