@@ -142,9 +142,10 @@ to表示收款人的钱包地址，value表示转账数量，转出手续费0-1T
 (↑创建一个收款订单，其中name表示收款人钱包地址)     
 > https://tronusdt.xyz/?way=paycheck&oid=[oid]  
  (↑传入订单号判断是否支付成功)   
-way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果成功支付返回的status会为1。若为0表示未支付。   
+way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维码图片，如果是前端界面的话，使用JavaScript语法:image.src='data:image/png;base64,'+qrcode即可显示图片。同时返回的oid表示订单号，可以调用way=paycheck&oid=[oid]检查订单是否已经成功支付，如果收到对应数量的数字货币，则成功支付，返回的status会为1。若为0表示未支付。
 > https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)    
-> https://tronusdt.xyz/?way=ui (访问将自动跳转到订单后台管理界面)    
+> https://tronusdt.xyz/?way=ui (访问将自动跳转到订单后台管理界面)
+ 
 #### 电报版本（Telegram Version） 
 电报机器人Telegram版本可联系我索要源码。  
 
