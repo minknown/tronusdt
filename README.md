@@ -37,7 +37,7 @@ URL访问以创建支付订单：
 | name  | 您的收款的USDT钱包地址 |  是 | TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG | 
 | type  | 收款币种类型,仅支持usdt和trx两种 | 是 | usdt | 
 | product  | 收款产品名字，仅作显示不宜太长 | 是 | 购买会员卡密 | 
-| value  | 收款的货币的数量,必须大于等于1 | 是 | 2.0 | 
+| value  | 收款的货币的数量,必须大于等于1 | 是 | 5.0 | 
 | jump  | 支付成功后提示的信息或跳转的网址 | 是 | https://baidu.com | 
 | about  | 大约法币金额的显示(非数字币),可不填 | 否 | $32.00 | 
 | service | 客服链接的显示(可https网址),可不填 | 否 | mailto:yuminhong@gamil.com |   
