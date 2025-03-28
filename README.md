@@ -16,7 +16,8 @@ If you are a user from the United States and Europe, we recommend that you use w
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  
 
 #### 视频教程（Tutorial Video）  
-[点此在线播放视频教程](https://mayizt.com/other_fun/tron.mp4)  
+[点此在线播放视频综合教程](https://mayizt.com/other_fun/tron.mp4)  
+[视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)  
 [我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
 
 视频教程分为:支付接口讲解、将密钥导入APP使用方法、尾数叠加解释等问题解答。易语言的可自行跳过。    
