@@ -5,8 +5,8 @@
 ### 框架优势
 1:提供源码：目前提供了PHP源码和其他主流源码都有提供，即本页中payui.php文件，没错只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
 2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有129个商家使用本框架集成USDT插件进行收款或钱包开发。    
-3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便。     
-4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容。   
+3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
+4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。   
 
 ### 英文说明:
 Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
@@ -147,7 +147,7 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 > https://tronusdt.xyz/?way=payui (访问将自动跳转到UI图形界面的订单创建界面)    
 > https://tronusdt.xyz/?way=ui (访问将自动跳转到订单后台管理界面)
 
-#### 我们完美支持币安站内链下转账（Payment and callback APIs）:
+#### 我们完美支持币安站内链下转账（We support Binance internal transactions）:
 如果您的商家收款地址为币安上的钱包地址，在使用way=pay生产支付订单时，请确保您的币安钱包已经在tronusdt本框架上绑定过了。
 绑定的作用是，我们可以通过key调用币安API，查看一些站内交易信息。      
 如果没有绑定，请打开 https://tronusdt.xyz/?way=bindui 填写几个参数即可绑定。   
