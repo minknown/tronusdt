@@ -118,8 +118,8 @@ auto=no时jump为页面跳转地址，如果auto为yes或async时，jump通常�
 此处没有返回12单词助记词，但没关系可另外通过代码自行将私钥转为单词词组即可，网上有代码教程。     
 **生成的私钥记录下来，可以用于自动收款，也可以在imtoken、Bestwallet、币安等其他著名的数字货币钱包上导入，即可图形界面上操作钱包，查看余额，转账交易等。**  
 **下述下载安装任一APP即可，当然不局限于这两款，反正记住有私钥：任何地方都可以恢复并显示您的钱包。**  
->https://imtoken.im (中国大陆可能打不开，打开后下载新建钱包，导入密钥即可使用)
->https://tronusdt.xyz/?way=imtoken (imtoken的详细使用教程，含安卓安装包apk)    
+>https://imtoken.im (中国大陆可能打不开，打开后下载新建钱包，导入密钥即可使用)      
+>https://tronusdt.xyz/?way=imtoken (imtoken的详细使用教程，含安卓安装包apk)      
 >https://bestwallet.com/ (打开后下载新建钱包，导入密钥即可使用)  
 
 
