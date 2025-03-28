@@ -3,7 +3,7 @@
 **(有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解)**  
 
 ### 框架优势
-1:提供源码：目前提供了PHP源码和其他主流源码都有提供，即本页中payui.php文件，没错只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
+1:提供源码：目前提供了PHP源码(payui.php)和其他主流源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
 2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有129个商家使用本框架集成USDT插件进行收款或钱包开发。    
 3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
 4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。   
@@ -16,8 +16,8 @@ If you are a user from the United States and Europe, we recommend that you use w
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  
 
 #### 视频教程（Tutorial Video）  
-[点此在线播放视频综合教程](https://mayizt.com/other_fun/tron.mp4)  
-[视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)  
+[视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
+[视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)    
 [我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
 
 视频教程分为:支付接口讲解、将密钥导入APP使用方法、尾数叠加解释等问题解答。易语言的可自行跳过。    
@@ -62,16 +62,18 @@ URL访问以创建支付订单：
 
 ### auto参数自动回调介绍：    
 **** auto有3个值可选，分别是no、yes和async，如果auto为空不传，则默认为no。****    
-****(1)auto=no模式****      
+>auto参数视频讲解：https://tronusdt.xyz/?way=video&video=async.mp4    
+
+##### (1)auto=no模式     
 此模式最开始的模式。创建订单后，用户需要手动点击支付界面上的[我已经支付]按钮去发起ajax请求检查订单是否支付成功，如果成功则页面发生jump跳转。   如果用户没有点击，支付页面如果还没有关闭的话，后台默认也会每隔几秒自动发起ajax请求调用[我已经支付]按钮事件。其本质是调用way=paycheck接口去主动检查订单是否支付。    
 
 >这种情况有个缺陷，就是当用户创建订单后，关闭支付页面，然后进行了转币支付，如果转币成功，商家收到了币，用户由于关闭支付页面，支付页面，以及支付页面的[我已经支付]按钮也点击不到了，订单状态无法变为交易成功，导致用户也无法获得相应商品和服务。所以后来我们引入自动回调功能了，创建订单时指定auto=yes或auto=async，则用户哪怕关闭了支付页面，只要有支付成功(钱包收到USDT)，我们的服务器就会自动调用访问订单指定的jump上的网址（这不需要你做什么）。   
 
-****(2)auto=yes模式****   
+##### (2)auto=yes模式   
 auto=yes提供的自动回调并不是实时回调，我们是在创建订单后的第5分钟和第15分钟进行订单支付状态检查。这是我们后台自己去发起这两次检查的（只要你创建订单时指定auto=yes）。  
 当查询订单时auto还可能返回first和finish两个文本值。出现no表示订单没有开启自动后台回调，出现yes表示订单开启回调等待回调。出现first表示订单已经进行第一次检查支付状态（通常在订单创建后的第5分钟），出现finish表示订单已经在我们的服务器经历了2次订单支付状态检查（第5分钟和第15分钟）。这两次检查中如果订单为支付成功（status=1）则会以GET的形式自动访问下单时的jump参数URL。请自行在JUMP地址中添加订单号等信息。    
 
-****(3)auto=async模式****    
+##### (3)auto=async模式      
 auto=async提供的是立刻或接近实时的回调。但支持USDT币种的订单。只要数字货币地址(name)的账目上收到对应的币，JUMP回调很快甚至是立刻被访问和执行。这些也是全自动的。
 当查询订单时auto可能返回asyncing和asyncok两个值，一开始下单是async的，如果auto变为asyncing，表示订单指定的商家数字货币地址(name)已经收到此订单的数字货币，但是jump中的链接系统还未读取访问。也就是以收到币但未回调完成。如果auto变为asynok，则表示商家数字货币地址(name)已经收到此订单的数字货币，而且jump中的链接已经被读取访问，回调完成了。  
 
