@@ -1,6 +1,6 @@
-//代码来源：https://github.com/minknown/tronusdt
-//代码作用：python接入usdt收款程序。
-//请先根目录运行pip install requests安装依赖包requests
+# 代码来源：https://github.com/minknown/tronusdt
+# 代码作用：python接入usdt收款程序。
+# 请先根目录运行pip install requests安装依赖包requests
 
 import requests
 
@@ -33,12 +33,3 @@ while d==0:
 		d=1
 		print("您已经支付成功")
 		break
-
-
-
-
-
-
-
-
-
