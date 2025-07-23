@@ -15,7 +15,7 @@ Rapid development of USDT wallet and collection, including web interface for tra
 At present, the PHP source code is provided, which is the payui.exe file on this page. Yes, only one file and about 200 lines of code are needed to run this payment system.   
 The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.  
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
-All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  
+All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thanks!
 
 #### 视频教程（Tutorial Video）  
 [视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
