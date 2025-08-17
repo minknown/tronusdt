@@ -15,7 +15,7 @@ Rapid development of USDT wallet and collection, including web interface for tra
 At present, the PHP source code is provided, which is the payui.exe file on this page. Yes, only one file and about 200 lines of code are needed to run this payment system.   
 The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.  
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
-All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thanks!
+All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thank you!
 
 #### 视频教程（Tutorial Video）  
 [视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
@@ -67,7 +67,7 @@ URL访问以创建支付订单：
 >auto参数视频讲解：https://tronusdt.xyz/?way=video&video=async.mp4    
 
 ##### (1)auto=no模式     
-此模式最开始的模式。创建订单后，用户需要手动点击支付界面上的[我已经支付]按钮去发起ajax请求检查订单是否支付成功，如果成功则页面发生jump跳转。   如果用户没有点击，支付页面如果还没有关闭的话，后台默认也会每隔几秒自动发起ajax请求调用[我已经支付]按钮事件。其本质是调用way=paycheck接口去主动检查订单是否支付。    
+此模式最开始的模式。创建订单后，用户需要手动点击支付界面上的[我已经支付]按钮去发起ajax请求检查订单是否支付成功，如果成功则页面发生jump跳转。   如果用户没有点击，支付页面如果还没有关闭的话，后台默认也会每隔几秒自动发起ajax请求调用[我已经支付]按钮事件。其本质是调用way=paycheck接口去主动检查订单是否支付。.        
 
 >这种情况有个缺陷，就是当用户创建订单后，关闭支付页面，然后进行了转币支付，如果转币成功，商家收到了币，用户由于关闭支付页面，支付页面，以及支付页面的[我已经支付]按钮也点击不到了，订单状态无法变为交易成功，导致用户也无法获得相应商品和服务。所以后来我们引入自动回调功能了，创建订单时指定auto=yes或auto=async，则用户哪怕关闭了支付页面，只要有支付成功(钱包收到USDT)，我们的服务器就会自动调用访问订单指定的jump上的网址（这不需要你做什么）。   
 
