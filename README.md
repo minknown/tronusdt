@@ -37,6 +37,7 @@ URL访问以创建支付订单：
 >https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=测试尾部追加内容请尽快支付          
  (↑直接创建订单并进入支付页)     
 >way=pay和way=payui不同，前者返回json数据创建订单，后者显示除了创建订单，还将页面重定向到一个支付图形界面。        
+>pay页面可以自己搭建，源码为PHP在本仓库有提供。     
 
 **参数说明**
 |  参数名   | 说明  | 必须性  |  示例值  |
