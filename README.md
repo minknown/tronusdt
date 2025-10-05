@@ -8,7 +8,7 @@
 2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有129个商家使用本框架集成USDT插件进行收款或钱包开发。    
 3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
 4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
-5:全新升级了所有兼容USDT各项协议，是最好用的USDT支付框架。   
+5:全新升级了所有兼容USDT各项协议，是最好用的USDT支付框架。。   
 
 ### 英文说明:
 Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
@@ -23,7 +23,7 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 [我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
 
 视频教程分为:支付接口讲解、将密钥导入APP使用方法、尾数叠加解释等问题解答。易语言的可自行跳过。    
-(在视频教程内均有以下源码的展示，可直接跳到您熟悉的编程语言进行播放了解。)  
+(在视频教程内均有以下源码的展示，可直接跳到您熟悉的编程语言进行播放了解。。)  
 
 |  编程语言   | PHP  | JavaScript  |  Python  |  易语言  |  Java  |  C++  |
 |  ----  | ----  |   ----  |  ----  |  ----  |  ----  |  ----  |
