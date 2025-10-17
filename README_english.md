@@ -1,262 +1,225 @@
+# tronusdt
+Funciones principales: este marco se utiliza para acceder rápidamente a la función de billetera USDT o a la función de recopilación de USDT para su sitio web o aplicación sin ningún conocimiento de blockchain. Cubre las API de interfaz web comunes, como consultas de transacciones, transferencias de moneda y devolución de llamadas de cobros. Admite muchos lenguajes de programación como Python\JAVA\NodeJs\PHP\GO\Ruby\C#\Huoshan Yi Language. Todos los siguientes USDT se refieren al USDT en el formato USTD-TRC20. Las monedas TRX y USDT comparten la misma dirección de pago.
+**(Si tiene alguna pregunta, no chatee en privado ni deje comentarios a través de esta publicación. Existe una alta probabilidad de que no haya respuesta. Por favor contáctenos a través del correo electrónico al final de esta página. Gracias por su comprensión)**
+**(En realidad, puede acceder a él usted mismo leyendo este documento y video. Si no sabe cómo, comuníquese conmigo por correo electrónico en la parte inferior para obtener ayuda y orientación gratuitas)**
 
-# tronusdt 
+### Ventajas del marco
+1: Proporcionar código fuente: actualmente, se proporciona código fuente PHP (payui.php) y otros códigos fuente convencionales. Sí, cada lenguaje de programación sólo requiere 1 archivo y unas 20 líneas de código para ejecutar este framework o sistema de pago.
+2: Alta disponibilidad: este marco está disponible durante mucho tiempo, tiene 100% de estabilidad y un equipo lo mantiene durante mucho tiempo. A la fecha de actualización, actualmente hay 129 comerciantes que utilizan este marco para integrar el complemento USDT para el cobro de pagos o el desarrollo de billeteras.
+3: Costo de aprendizaje cero: no es necesario comprender ningún conocimiento ni tecnología de blockchain, ni consultar otros documentos de desarrollo de API de moneda digital. Puede crear una función de billetera USDT llamando a varias interfaces en esta página o heredar la función de recopilación de USDT en la APLICACIÓN de su sitio web. Muy conveniente (no es necesario tener ningún conocimiento de blockchain).
+4: Perfectamente compatible con las transacciones de transferencia de USDT fuera de la cadena de Binance. Este tipo de transacción no tiene tarifa de manejo y llega en segundos, sin necesidad de confirmación de blockchain. Es decir, las direcciones USDT de los usuarios y comerciantes son propiedad de Binance. Esta es la primera vez que este marco es compatible entre todos los marcos USDT actualmente en el mercado (soporta transacciones internas de Binance de USDT).
+5: Recientemente actualizado y compatible con todos los protocolos USDT, es el marco de pago USDT más útil. .
 
-**Main function**: This framework is used to quickly integrate USDT wallet or USDT collection functionality into your website or APP , without requiring any blockchain knowledge. It covers commonly used Web API interfaces such as transaction query, coin transfer, and collection callback. It supports many programming languages including Python, JAVA, NodeJs, PHP, GO, Ruby, C\#, and Huoshan Easy Language. The USDT mentioned below all refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.
-**(If you have any questions, please do not send a private message or leave comments through this post, as it is highly likely you will not receive a reply. Please contact us via the email at the bottom of this page. Thank you for your understanding)** 
-**(In fact, by viewing this document and the video, you can integrate it yourself. If you can't, contact me via the email at the bottom for free guidance on integration)** 
+### Descripción en inglés:
+Rápido desarrollo de billetera y cobranza de USDT, incluida la interfaz web para transferencia/devolución de llamada.
+Actualmente, se proporciona el código fuente PHP, que es el archivo payui.exe en esta página. Sí, sólo se necesita un archivo y unas 200 líneas de código para ejecutar este sistema de pago.
+El siguiente USDT se refiere al USDT en forma de USTD-TRC20. La moneda TRX y el USDT comparten la misma dirección de recepción.
+Si es un usuario de Estados Unidos y Europa, le recomendamos que utilice la traducción web para leer este documento.
+Se debe acceder a todas las interfaces a través de POST; de lo contrario, es probable que se soliciten parámetros faltantes.  ¡gracias!
 
-### Framework Advantages
+#### Vídeo tutorial
+[Video tutorial: Click here to play online - Comprehensive tutorial of this framework](https://tronusdt.xyz/?way=video&video=tron.mp4)      
+[Video tutorial: Taking Python as an example, experience 3-minute high-speed access](https://tronusdt.xyz/?way=video&video=easy.mp4)       
+[Our presentation on Youtube, with both Chinese and English subtitles](https://www.youtube.com/watch?v=raqksD9EOOs)    
 
-1: **Source Code Provided**: Currently, PHP source code (payui.php) and other mainstream source codes are provided. That's right, for each programming language, only 1 file and about 20 lines of code are needed to run this framework or collection system.
-2: **High Availability**: This framework is available long-term, 100% stable, and maintained by a team over the long term. As of the update date, 129 merchants are using this framework to integrate the USDT plugin for collection or wallet development.
-3: **Zero Learning Cost**: No need to understand any blockchain knowledge or technology , and no need to view other digital currency API development documentation. You can create USDT wallet functions or integrate USDT collection functionality into your website APP by calling the few interfaces on this page. It is very convenient (No need to have any knowledge of blockchain).
-4: **Perfect Compatibility with Binance's Off-chain USDT Transfers**: These transactions have 0 transaction fees and arrive instantly, completely without the need for blockchain confirmation. This applies when both the user's and the merchant's USDT addresses are under Binance. This framework is the first of all USDT frameworks on the market to be compatible with this (Support Binance internal transactions of USDT).
-5: **Completely Upgraded** to be compatible with all USDT protocols, it is the easiest-to-use USDT payment framework.
+El vídeo tutorial se divide en: explicación de la interfaz de pago, cómo importar la clave a la APP, explicación de la superposición de mantisa y otras preguntas y respuestas. Puedes saltarte los de lenguaje fácil tú mismo.
+(El siguiente código fuente se muestra en el video tutorial. Puede saltar directamente al lenguaje de programación con el que está familiarizado para obtener más información).
 
-### English Description:
+| Lenguaje de programación | PHP | JavaScript | Pitón | Idioma fácil | Java | C++ |
+|  ----  | ----  |   ----  |  ----  |  ----  |  ----  |  ----  |
+| ¿Github proporciona código fuente de referencia? Sí | Sí | Sí | Sí | Sí | No |
+| Hora aproximada de inicio de la explicación en vídeo | 3er minuto | 5to minuto | minuto 15 | Minuto 21 | No mencionado en el video | No mencionado en el video |
 
-Rapid development of USDT wallet and collection, including web interface for transfer/callback.
+### Pruebe rápidamente el efecto del pago:
+Acceso URL para crear orden de pago:
+>https://tronusdt.xyz/?way=payui
+( ↑Recomendado hacer clic aquí)
+>https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=Pague lo antes posible por el contenido adicional en final de la prueba
+( ↑ Cree un pedido directamente e ingrese a la página de pago)
+>way=pay y way=payui son diferentes. El primero devuelve datos json para crear un pedido, mientras que el segundo muestra que además de crear un pedido, también redirige la página a una interfaz gráfica de pago.
+> La página de pago puede crearla usted mismo y el código fuente es PHP y se proporciona en este almacén.
 
-At present, the PHP source code is provided, which is the payui.exe file on this page.
-Yes, only one file and about 200 lines of code are needed to run this payment system.
-The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.
-If you are a user from the United States and Europe, we recommend that you use web translation to read this document.
-All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters . thank you\! 
+**Descripción del parámetro**
+| Nombre del parámetro | Descripción | Requisito | Valor de ejemplo |
+|  ----  | ----  |   ----  |  ----  |
+| nombre | Su dirección de billetera USDT para pago | Sí | TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG |
+| tipo | Tipo de moneda de pago, solo se admiten usdt y trx | Sí | usdt |
+| producto | El nombre del producto de pago, es sólo para visualización y no debe ser demasiado largo | Sí | Comprar contraseña de tarjeta de membresía |
+| valor | La cantidad de moneda a pagar, debe ser mayor o igual a 1 | Sí | 5.0 |
+| saltar | La información o URL de salto o URL de devolución de llamada que se solicita después de un pago exitoso | Sí | https://baidu.com |
+| acerca de | Visualización del monto aproximado de moneda fiduciaria (no moneda digital), opcional | No | $32.00 |
+| servicio | Visualización del enlace de servicio al cliente (puede ser URL https), opcional | No | correo a:yuminhong@gamil.com |
+| automático | Ya sea para habilitar la devolución de llamada automática, solo admite sí o asíncrono o completar no | no | no |
+| contraseña de nombre | Nuevos parámetros en la nueva versión: Si se ha creado protección comercial para su dirección, debe pasar este parámetro de contraseña para generar una orden de pago. De forma predeterminada, la nueva dirección se puede dejar en blanco | No | 35974982 |
+| nota | Nuevos parámetros en la nueva versión: admite agregar código html o texto en la parte inferior de la página de pago. La longitud no debe exceder mucho. Generalmente, no es un gran problema. Solo se admite la entrada GET | No | Pague lo antes posible si tiene alguna pregunta, comuníquese con el servicio al cliente |
 
-#### 视频教程（Tutorial Video） 
+**Aviso:**
++ La billetera del parámetro de nombre debe ser una billetera creada a través del sistema tronusdt, o puede ser la dirección de su billetera Binance USDT (TRC20). Si desea crear una billetera, haga clic en Crear billetera en la interfaz way=creat o en la página de prueba para obtener una billetera gratis. Puede guardar e importar la clave privada a Imtoken para explorar el saldo de la billetera y realizar otras operaciones, como transferencias.  Si desea utilizar su billetera Binance como dirección de pago comercial de USDT, vincule su billetera Binance en https://tronusdt.xyz/?way=bindui antes de crear un pedido.
++ El parámetro de salto se puede completar como una URL, que debe comenzar con http. Saltará a la página después de que el pago se haya recibido correctamente. Si inicia automáticamente en modo de devolución de llamada (asíncrono/sí), JUMP representa la URL de devolución de llamada en segundo plano. También se puede completar como una oración o un código de tarjeta de producto, que se mostrará después de que el pago se reciba correctamente. Si no comprende este parámetro, puede completarlo directamente con -, pero no puede dejarlo en blanco.
++ Puede copiar el código fuente payui.php de este almacén a su servidor e implementarlo usted mismo. También puede configurar su propia lógica empresarial después de un pago exitoso, como enviar notificaciones por SMS después del pago, etc. (JavaScript).
++ about es sólo para visualización y tiene poco significado. El servicio es un enlace de servicio al cliente. No se recomienda que la URL sea demasiado larga o contenga &; de lo contrario, se puede informar un error. Se recomienda completar la dirección de correo electrónico.
++ Las transacciones descentralizadas en cadena están fuera de nuestro control, por lo que puedes utilizarlas con confianza.
 
-[Video tutorial: Click here to play online - Comprehensive tutorial of this framework](https://tronusdt.xyz/?way=video&video=tron.mp4)     
-[Video tutorial: Taking Python as an example, experience 3-minute high-speed access](https://tronusdt.xyz/?way=video&video=easy.mp4)     
-[Our presentation on Youtube, with both Chinese and English subtitles](https://www.youtube.com/watch?v=raqksD9EOOs)     
+**Código de error 182:**
+Si se genera un pedido, se muestra un código de error 182. Esto se debe a que algunas personas sin escrúpulos utilizan ataques. El método de ataque consiste en utilizar scripts automáticos para crear pedidos en lotes, lo que hace que el importe del pago de la dirección siga aumentando. Por lo tanto, actualmente no todo el mundo puede generar un pedido de TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG. Hemos configurado una lista blanca de IP de llamadas para esta dirección y configuramos una verificación de contraseña requerida para generar un pedido (pase el parámetro de contraseña correcto) o ingresamos un código de verificación para crear un pedido exitosamente.
+Si desea tratar y resolver el código de error 182, cambie la dirección de la billetera de pago (es decir, cambie el parámetro de nombre a su propia dirección. De forma predeterminada, la billetera recién creada no establece la lista blanca de llamadas ni la contraseña de verificación), o si simplemente experimenta el efecto de pago, puede usar directamente la [página UI] para ingresar el código de verificación para omitir la verificación 182 y hacer clic en el sitio web para experimentar la función de pago: https://tronusdt.xyz/?way=payui
+Esta no es una opción necesaria. Si necesita configurar protección comercial para su dirección, lista blanca de IP o crear una orden de pago que requiera verificación de propiedad, puede contactarnos por correo electrónico para configurarlo de forma gratuita.
 
-The video tutorial is divided into: explanation of the payment interface, how to import the key into the APP, explanation of the overlay of decimal places, and other Q\&A. Users of Easy Language can skip ahead.
-(The source codes below are demonstrated in the video tutorial, you can skip directly to the programming language you are familiar with to watch and understand) .
+### Introducción de devolución de llamada automática de parámetros automáticos:
+**** auto tiene un total de 3 valores opcionales, a saber, no, sí y async. Si auto está vacío y no se pasa, el valor predeterminado es no. ****
+>Video explicativo de los parámetros automáticos: https://tronusdt.xyz/?way=video&video=async.mp4
 
-| Programming Language | PHP | JavaScript | Python | Easy Language | Java | C++ |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| Is reference source code provided on Github | Yes | Yes | Yes | Yes | Yes | No |
-| Video explanation approximate start time | 3rd minute | 5th minute | 15th minute | 21st minute | Not mentioned in the video | Not mentioned in the video |
+##### (1)automático=sin modo
+El modo inicial de este modo. Después de crear un pedido, el usuario debe hacer clic manualmente en el botón [He pagado] en la interfaz de pago para iniciar una solicitud ajax y verificar si el pedido se pagó correctamente. Si tiene éxito, la página saltará.   Si el usuario no hace clic y la página de pago no se ha cerrado, el fondo iniciará automáticamente una solicitud ajax para llamar al evento del botón [He pagado] cada pocos segundos de forma predeterminada. Su esencia es llamar a la interfaz way=paycheck para verificar activamente si el pedido está pagado. .
 
-### Quick Test Collection Effect: 
+>Un defecto en esta situación es que después de que el usuario crea un pedido, cierra la página de pago y luego transfiere la moneda para el pago. Si la transferencia de moneda se realiza correctamente y el comerciante recibe las monedas, el usuario no puede hacer clic en el botón [He pagado] en la página de pago, la página de pago o la página de pago, y el estado del pedido no se puede cambiar a transacción exitosa, lo que resulta en que el usuario no pueda obtener los bienes y servicios correspondientes. Más tarde introdujimos la función de devolución de llamada automática. Al crear un pedido, especifique auto=yes o auto=async. Incluso si el usuario cierra la página de pago, siempre que el pago se realice correctamente (la billetera reciba USDT), nuestro servidor llamará automáticamente a la URL en el salto especificado en el pedido (esto no requiere que usted haga nada).
 
-URL access to create a payment order: 
+##### (2)auto=si modo
+La devolución de llamada automática proporcionada por auto=yes no es una devolución de llamada en tiempo real. Verificamos el estado de pago del pedido a los minutos 5 y 15 después de crear el pedido. Nuestro backend inicia estas dos comprobaciones por sí solo (siempre que especifique auto=yes al crear un pedido).
+Al consultar un pedido, auto también puede devolver dos valores de texto: primero y finalizar. Si no aparece, significa que el pedido no ha habilitado la devolución de llamada automática en segundo plano. Si aparece sí, significa que el pedido ha habilitado la devolución de llamada y está esperando dicha devolución. La aparición de primero significa que el pedido ha pasado por la primera verificación del estado de pago (generalmente el quinto minuto después de que se crea el pedido), y la aparición de fin significa que el pedido ha pasado por 2 verificaciones de estado de pago del pedido en nuestro servidor (el minuto 5 y el minuto 15). En estas dos comprobaciones, si el pedido se paga correctamente (estado = 1), se accederá automáticamente a la URL del parámetro de salto al realizar el pedido en forma de GET. Agregue usted mismo el número de pedido y otra información a la dirección JUMP.
 
-> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui)   
-> (↑Recommended to click here)    
-> [https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=some_new_text_content]    
-> (↑Directly create an order and enter the payment page) 
-> way=pay is different from way=payui. The former returns JSON data to create the order, while the latter, in addition to creating the order, redirects the page to a payment graphical interface.
-> The pay page can be built by yourself, the PHP source code is provided in this repository.
+##### (3)auto=modo asíncrono
+auto=async proporciona devoluciones de llamada inmediatas o casi en tiempo real. Pero se admiten pedidos en moneda USDT. Siempre que se reciba la moneda correspondiente en la cuenta de la dirección de moneda digital (nombre), se accederá y ejecutará la devolución de llamada JUMP de forma rápida o incluso inmediata. Estos también son completamente automáticos.
+Al consultar un pedido, auto puede devolver dos valores: asyncing y asyncok. El orden inicial es asíncrono. Si automáticamente cambia a asíncrono, significa que la dirección de moneda digital del comerciante (nombre) especificada en el pedido ha recibido la moneda digital de este pedido, pero el sistema de enlace en el salto aún no la ha leído ni accedido. Es decir, se recibe la moneda pero no se completa ninguna devolución de llamada. Si automáticamente cambia a asynok, significa que la dirección de moneda digital (nombre) del comerciante recibió la moneda digital de este pedido, se leyó y accedió al enlace en el salto y se completó la devolución de llamada.
 
-**Parameter Description** 
+****descripción del falsificador****
+Si el estado de la devolución de llamada automática es olvido, significa olvido, es decir, se ha verificado varias veces, pero todos los resultados de la verificación no están pagados y no se volverá a verificar, incluso si se paga más tarde. El estado del pedido ya no se verifica ni se modifica. Generalmente dentro del período de validez del pedido (dentro de los 15 minutos), a menos que auto=no, el sistema lo verificará automáticamente. Si el cheque no se paga, se volverá a verificar varias veces, pero si supera los 15 minutos, ya no se verificará. Incluso si paga después de 15 minutos, el estado del pedido no cambiará a éxito (estado=1).
 
-| Parameter Name | Description | Required | Example Value |
-| ---- | ---- | ---- | ---- |
-| name | Your receiving USDT wallet address | Yes | TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG |
-| type | Type of currency to be collected, only supports usdt and trx | Yes | usdt |
-| product | Name of the product to be collected, for display only, should not be too long | Yes | Purchase Membership Card Code |
-| value | Quantity of the currency to be collected, must be greater than or equal to 1 | Yes | 5.0 |
-| jump | Message to be displayed after successful payment, or the jump URL, or the callback URL | Yes | [https://baidu.com](https://baidu.com) |
-| about | Display of approximate fiat currency amount (non-digital currency), can be left blank | No | $32.00 |
-| service | Display of customer service link (can be https URL), can be left blank | No | mailto:yuminhong@gamil.com |
-| auto | Whether to enable automatic callback, only supports yes or async or fill in no | No | no |
-| namepass | New parameter: If your address has created business protection, this password parameter must be passed in to generate the payment order. Default new addresses can be left blank | No | 35974982 |
-| note | New parameter: Supports appending html code or text at the bottom of the payment page. Length should not be too long, generally not an issue, only supports GET input | No | Please pay as soon as possible, contact customer service if you have any questions |
+****Otras instrucciones****
+Además de esto, nuestro servidor puede llamar a la URL de salto varias veces. Por lo tanto, si se trata de un tipo de recarga que aumenta el monto, preste atención a la URL de devolución de llamada y prepárese para evitar accidentes.
+Cuando auto = no, jump es la dirección de salto de página. Si auto es sí o async, jump generalmente representa la URL de devolución de llamada en segundo plano. Una vez recibida la moneda digital, automáticamente volveremos a llamar y accederemos al enlace URL en el salto.
+Además, no podremos realizar una verificación automática del estado del pago del pedido después de más de 15 minutos. Esto se debe a que no es necesario y el período de validez de nuestro pedido también es de 15 minutos.
 
-**Note:** 
 
-  + The wallet for the **name** parameter must be a wallet constructed through the tronusdt system, or it can also be your Binance USDT wallet address (TRC20). If you want to create a wallet, click 'Create Wallet' on the `way=creat` interface or test page to get a free wallet. You can save the private key and import it into Imtoken to view the wallet balance and perform transfers and other operations. If you want to use your Binance wallet as the USDT merchant collection address, please first bind the Binance wallet via [https://tronusdt.xyz/?way=bindui](https://tronusdt.xyz/?way=bindui) before creating the order.
-  + The **jump** parameter can be a URL, which must start with `http`. It will perform a page jump after successful collection. If you enable **auto** for callback mode (async/yes), JUMP represents the backend callback URL. It can also be a sentence or a product card code, which will be displayed after successful collection. If you do not understand this parameter, you can fill in `-`, but it cannot be left empty.
-  + You can copy the `payui.php` source code from this repository to your server and deploy it yourself. You can also set up your own business logic after successful collection, such as sending SMS notifications after payment (in the JavaScript section).
-  + **about** is only for display, with little practical significance. **service** is the customer service link. It is not recommended to use a very long URL or one containing `&`, otherwise it may cause an error. It is recommended to fill in an email address.
-  + We cannot control decentralized on-chain transactions, please use with confidence.
+### Conozco otros lenguajes de programación, ¿cómo puedo construir mi propio sistema de pago?
+También puede utilizar otros lenguajes y plataformas de programación como Python\JAVA para crear su programa de colección USDT. Sólo necesita llamar a las 2 interfaces proporcionadas aquí:
++ La primera interfaz es: Crear un pedido. Si la creación es exitosa, se devolverá el número de pedido.
++ La segunda interfaz es: verifique si el pedido se pagó correctamente. Si el pago se realiza correctamente, algunas cosas se personalizarán.
+Durante todo el proceso de desarrollo, no importa si no está familiarizado con los conocimientos relacionados con blockchain o incluso si no comprende Bitcoin, Tron y NFT.
+Puede construir su propio sistema de cobro de pagos en 1 hora, utilizando su propio lenguaje de programación familiar.
 
-**182 Error Code:** 
-If a 182 error code is prompted when generating an order, it is because illegal individuals are using an attack. The attack method involves using automatic scripts to batch-create orders, causing the payment amount for that address to be continuously raised. Therefore, currently not everyone can generate an order for `TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG`. We have set up an IP whitelist for calls to this address, and set that generating an order requires password verification (passing in the correct `namepass` parameter), or an input verification code can also successfully create an order.
-If you want to handle and resolve the 182 error code, you can change the collection wallet address (i.e., modify the **name** parameter to your own address; newly created wallets do not have call whitelists and password verification set by default) , or if you just want to experience the payment effect, you can directly use the [UI page] to enter a verification code to skip the 182 verification. Open this website to experience the payment function: [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui) 
-This is not a necessary option. If you need to set up business protection for your address, an IP whitelist, or require verification of ownership to create a payment order, you can contact us via email for a free setup.
-
-### Introduction to the **auto** Parameter for Automatic Callback: 
-
-\*\*\*\* The **auto** parameter has 3 available values: **no**, **yes**, and **async**. If **auto** is left blank, the default is **no**. \*\*\*\* 
-
-> **auto** parameter video explanation: [https://tronusdt.xyz/?way=video\&video=async.mp4](https://tronusdt.xyz/?way=video&video=async.mp4) 
-
-##### (1) **auto=no** mode 
-
-This is the original mode. After creating an order, the user needs to manually click the **[I have paid]** button on the payment interface to initiate an AJAX request to check whether the order was paid successfully. If successful, the page will perform the **jump** redirection. If the user does not click, the backend will also automatically initiate an AJAX request to call the **[I have paid]** button event every few seconds if the payment page has not been closed. The essence is to call the `way=paycheck` interface to actively check whether the order has been paid.
-
-> There is a flaw in this situation [cite: 21]: if a user creates an order, closes the payment page, and then proceeds with the coin transfer payment[cite: 21]. If the transfer is successful and the merchant receives the coins, because the user closed the payment page, the payment page and the **[I have paid]** button on the payment page can no longer be clicked[cite: 21]. The order status cannot be changed to "transaction successful," which means the user cannot obtain the corresponding product or service[cite: 21]. That's why we later introduced the automatic callback function[cite: 21]. If you specify `auto=yes` or `auto=async` when creating the order, even if the user closes the payment page, as long as the payment is successful (the wallet receives USDT), our server will automatically access the URL specified in the order's **jump** parameter (you don't need to do anything)[cite: 21].
-
-##### (2) **auto=yes** mode 
-
-The automatic callback provided by `auto=yes` is not a real-time callback. We check the order payment status at the 5th and 15th minutes after the order is created. Our backend initiates these two checks itself (as long as you specify `auto=yes` when creating the order).
-When querying the order, **auto** may also return the text values **first** and **finish**. The appearance of **no** means the order has not enabled automatic backend callback, and **yes** means the order has enabled callback and is waiting for it. **first** means the order has undergone the first payment status check (usually at the 5th minute after order creation) , and **finish** means the order has undergone 2 payment status checks on our server (the 5th and 15th minutes). If the order is successfully paid (status=1) during these two checks, the URL in the **jump** parameter from the time of placing the order will be automatically accessed in the GET format. Please ensure you add order number and other information to the JUMP address yourself.
-
-##### (3) **auto=async** mode 
-
-`auto=async` provides immediate or near real-time callback. It only supports orders for the USDT currency. As long as the corresponding coin is received in the digital currency address's (**name**) account, the JUMP callback will be accessed and executed quickly, or even instantly. These are also fully automatic.
-When querying the order, **auto** may return two values: **asyncing** and **asyncok**. Initially, the order is `async`. If **auto** changes to **asyncing**, it means the merchant's digital currency address (**name**) specified in the order has received the digital currency for this order, but the system has not yet read and accessed the link in **jump**. In other words, the coins have been received but the callback is not yet completed. If **auto** changes to **asynok**, it means the merchant's digital currency address (**name**) has received the digital currency for this order, and the link in **jump** has been read and accessed, meaning the callback is complete.
-
-\*\*\*\* **forger** explanation \*\*\*\* 
-If the callback status **auto** is **forger**, it means "forgotten". That is, it has been checked multiple times, but the result has always been "unpaid," and no further checks will be made, even if payment is made later. The order status will no longer be checked or changed. Usually, within the order's validity period (within 15 minutes), unless `auto=no`, the system will automatically check. If it checks and the order is unpaid, it will check again multiple times. However, if it exceeds 15 minutes, it will no longer check. Even if you pay after 15 minutes, the order status will not be changed to successful (status=1).
-
-\*\*\*\* Other notes \*\*\*\* 
-Furthermore, our server might call the **jump** URL multiple times. Therefore, if it is for increasing the amount or top-up type transactions, please prepare your callback URL to prevent duplication.
-When `auto=no`, **jump** is the page redirection address. When **auto** is **yes** or **async**, **jump** usually represents the backend callback URL. Once the digital currency is received, we will automatically callback and access the URL link in **jump**.
-Additionally, we may not perform **auto** automatic order payment status checks after 15 minutes. This is because it is unnecessary, as our order validity period is also within 15 minutes.
-
-### I know other programming languages, how do I build my own collection system? 
-
-You can also use Python, JAVA, or other programming languages and platforms to build your USDT collection program. You only need to call the 2 interfaces provided here: 
-
-  + The first interface is: **Create Order**. If creation is successful, an order number is returned.
-  + The second interface is: **Check if the order is successfully paid**. If payment is successful, customize some actions.
-    Throughout the entire development process, it doesn't matter if you are not familiar with blockchain-related knowledge, or even if you don't understand Bitcoin, TRON, or NFT knowledge.
-    You can construct your own dedicated collection system in your familiar programming language within 1 hour.
-
-### I don't know any programming language, how do I build my own collection system? 
-
-If you don't even know a programming language, it doesn't matter, there are two solutions: 
-
-  + The first is to show the content and interfaces on this page to a programmer. They can also quickly build a collection system. It does not require high programming skills. The development cost is very low.
-  + The second is to use our existing system. You can concatenate your collection link: `https://tronusdt.xyz/?way=payui.php?name=....` and send it to others for payment.
-
------
-
-### Other Interface Descriptions 
-
-（英文:Access must be done POST and HTTPS.） 
-All the following interfaces **must be accessed using an HTTPS header and POST method**. A small number also support GET.
-Call rate: 15 QPS per second. The interfaces are stable and available long-term.
-This is why even if `wcode` is clearly passed in, it keeps prompting that the parameter `wcode` is required. This is because your calling method is GET.
-
-#### 1、Real-time Currency Price and Exchange Rate Query API: 
-
-（英文:Real time currency price and exchange rate query interface） 
-
-> [https://tronusdt.xyz/?way=price\&coin=btc](https://tronusdt.xyz/?way=price&coin=btc)    
-
-Note: Access with POST. If accessed with GET, it will prompt that the `coin` parameter is missing (the same applies to the interfaces below).
+### No conozco ningún lenguaje de programación, ¿cómo puedo construir mi propio sistema de pago?
  
-Where `high24h` represents the highest transaction price within 24 hours, and `change24h` represents the 24-hour increase, etc.. `lastPr` represents the latest RMB price.
+Si ni siquiera conoces un lenguaje de programación, no importa. Hay dos soluciones:
++ El primer método es mostrar el contenido y la interfaz de esta página a un programador, quien podrá crear rápidamente un sistema de pago, lo que no requiere grandes conocimientos de programación. Los costos de desarrollo son muy bajos.
++ La segunda opción es utilizar nuestro sistema existente, https://tronusdt.xyz/?way=payui.php?name=.... para unir su enlace de pago y enviarlo a otros para que realicen el pago.
 
-#### Generate Wallet API: 
+--------------------------
 
-（英文:To generate a free USDT wallet） 
-（英文:Here we have obtained the 'wcode' that will be used later） 
+### Otras descripciones de interfaz
+(Inglés: El acceso debe realizarse POST y HTTPS.)
+Las siguientes interfaces deben **usar encabezados HTTPS y se debe acceder a ellas en modo POST**, y algunas también admiten GET.
+Velocidad de llamada: 15 QPS por segundo, la interfaz es estable y está disponible durante mucho tiempo.
+Es por eso que wcode se pasa claramente, pero sigue indicando que es necesario pasar el parámetro wcode. Esto se debe a que su método de llamada es get.
 
-> [https://tronusdt.xyz/?way=creat\&mail=](https://tronusdt.xyz/?way=creat&mail=)[mail] 
-> Note: Please replace `[mail]` above with your email address. This email can be used later to log in to the background to view all created payment orders. It is used for management credentials and other functions.
-> You must record the wallet address, private key, and **wcode** returned by the call (it will be used later).
-> The 12-word mnemonic phrase is not returned here, but it doesn't matter. You can convert the private key to a word phrase yourself using code. There are code tutorials online.
-> **Record the generated private key. It can be used for automatic collection, and can also be imported into Imtoken, Bestwallet, Binance, and other famous digital currency wallets. This allows you to operate the wallet on the graphical interface, view the balance, transfer transactions, etc.** 
-> **You can download and install any of the APPs listed below. Of course, you are not limited to these two. Just remember that with the private key: your wallet can be restored and displayed anywhere.** 
-> [https://imtoken.im](https://imtoken.im) (May not open in mainland China. After opening, download and create a new wallet, import the key to use) 
-> [https://tronusdt.xyz/?way=imtoken](https://tronusdt.xyz/?way=imtoken) (Detailed usage tutorial for imtoken, including Android installation package apk) 
-> [https://bestwallet.com/](https://bestwallet.com/) (After opening, download and create a new wallet, import the key to use) 
+#### 1. API de consulta de tipo de cambio de moneda en tiempo real:
+(英文:Interfaz de consulta de precio de moneda y tipo de cambio en tiempo real)
+> https://tronusdt.xyz/?way=price&coin=btc
 
-#### View Wallet Balance and Other Information API: 
+Nota: Si se accede a través de POST, si se accede a través de GET, le indicará que falta el parámetro de moneda (lo mismo se aplica a las siguientes interfaces).
+![a.png](./images/a.png)  
+Entre ellos, high24h representa el precio de transacción más alto en 24 horas y change24h representa el aumento de 24 horas y otra información. lastPr representa el último precio en RMB.
 
-（英文:To query the balance and information of the wallet's various items） 
+#### Generar API de billetera:
+(Inglés: Para generar una billetera USDT gratis)
+(英文:Aquí hemos obtenido el 'wcode' que se utilizará más adelante)
+> https://tronusdt.xyz/?way=creat&mail=[correo]
+Nota: reemplace [correo] arriba con su dirección de correo electrónico. Esta dirección de correo electrónico se puede utilizar más adelante para iniciar sesión en el backend y ver todas las órdenes de pago creadas. Se utiliza para administrar credenciales y otras funciones.
+Asegúrese de registrar la dirección de la billetera, la clave privada y el código w devuelto por la llamada (para usarlo más adelante).
+La frase mnemotécnica de 12 palabras no se devuelve aquí, pero no importa. También puede convertir la clave privada en frases de palabras mediante código. Hay tutoriales de código en línea.
+**La clave privada generada se registra y puede usarse para la recopilación automática, o puede importarse a otras billeteras de moneda digital conocidas como imtoken, Bestwallet, Binance, etc. Puede operar la billetera en la interfaz gráfica, verificar el saldo, transferir transacciones, etc.**
+**Simplemente descargue e instale cualquiera de las aplicaciones que se enumeran a continuación. Por supuesto, no estás limitado a estos dos. De todos modos, recuerda tener la clave privada: tu billetera se puede restaurar y mostrar en cualquier lugar. **
+>https://imtoken.im (Es posible que no esté abierto en China continental. Después de abrirlo, descargue una nueva billetera e importe la clave para usar)
+>https://tronusdt.xyz/?way=imtoken (tutorial detallado sobre el uso de imtoken, incluido el paquete de instalación de Android apk)
+>https://bestwallet.com/ (Ábrelo, descarga la nueva billetera, importa la clave y úsala)
 
-> [https://tronusdt.xyz/?way=info\&wcode=](https://tronusdt.xyz/?way=info&wcode=)[wcode]    
-> `wcode` is what was returned when you called `way=creat` to create the wallet. `balance_trx` represents the remaining TRX balance in the wallet, and `balance_usdt` represents the USDT balance. There is other information not explained here.
 
-#### USDT Transfer API (Transfer for USDT): 
+#### Ver el saldo de la billetera y otra API de información:
+(英文:Para consultar el saldo y la información de los distintos artículos de la billetera)
+> https://tronusdt.xyz/?way=info&wcode=[wcode]
+El wcode es lo que se devolvió cuando previamente llamaste a way=creat para crear una billetera. balance_trx representa el saldo TRX restante en la billetera, balance_usdt representa el saldo USDT y otra información no se explicará aquí.
 
-> [https://tronusdt.xyz/?way=send\&wcode=](https://tronusdt.xyz/?way=send&wcode=)[wcode]\&to=[to]\&value=[value]    
-> `to` represents the recipient's wallet address, and `value` represents the transfer amount. The transfer fee is 8-10 TRX. That's right, transferring USDT consumes TRX.
+#### API de transferencia de USDT (Transferencia por USDT):
+> https://tronusdt.xyz/?way=send&wcode=[wcode]&to=[to]&value=[valor]
+to representa la dirección de billetera del beneficiario, el valor representa el monto de la transferencia y la tarifa de transferencia es 8-10TRX. Así es, transferir USDT consume TRX.
 
-#### TRX Transfer API (Transfer for TRX): 
+#### API de transferencia TRX (Transferencia para TRX):
+> https://tronusdt.xyz/?way=sendtrx&wcode=[wcode]&to=[to]&value=[valor]
+to representa la dirección de billetera del beneficiario, el valor representa el monto de la transferencia y la tarifa de transferencia es 0-1TRX.
 
-> [https://tronusdt.xyz/?way=sendtrx\&wcode=](https://tronusdt.xyz/?way=sendtrx&wcode=)[wcode]\&to=[to]\&value=[value]    
-> `to` represents the recipient's wallet address, and `value` represents the transfer amount. The transfer fee is 0-1 TRX.
+#### Consultar API de registro de transacciones (mostrar lista de transacciones):
+> https://tronusdt.xyz/?way=list&wcode=[wcode] (consultar registros de transacciones USDT)
+> https://tronusdt.xyz/?way=listtrx&wcode=[wcode] (consultar registros de transacciones TRX)
 
-#### Query Transaction Record API (show transaction list): 
+--------------------------
 
-> [https://tronusdt.xyz/?way=list\&wcode=](https://tronusdt.xyz/?way=list&wcode=)[wcode] (Query USDT transaction record)       
-> [https://tronusdt.xyz/?way=listtrx\&wcode=](https://tronusdt.xyz/?way=listtrx&wcode=)[wcode] (Query TRX transaction record)      
+#### API admitidas para el cobro de pagos (API de pago y devolución de llamada):
+> https://tronusdt.xyz/?way=pay&name=[nombre]&type=[tipo]&product=[producto]&value=[valor]&jump=[saltar]
+( ↑ Crear una orden de pago, donde el nombre representa la dirección de billetera del beneficiario)
+> https://tronusdt.xyz/?way=paycheck&oid=[oid]
+( ↑ Ingrese el número de pedido para determinar si el pago se realizó correctamente)
+Si way=pay se crea correctamente, devolverá un campo qrcode, que representa una imagen de código QR de pago. Si se trata de una interfaz de usuario, utilice la sintaxis de JavaScript: image.src='data:image/png;base64,'+qrcode para mostrar la imagen. El oid devuelto al mismo tiempo representa el número de pedido. Puede llamar a way=paycheck&oid=[oid] para comprobar si el pedido se ha pagado correctamente. Si se recibe la cantidad correspondiente de moneda digital, el pago se realiza correctamente y el estado devuelto será 1. Si es 0, significa que no se ha pagado.
+> https://tronusdt.xyz/?way=payui (el acceso saltará automáticamente a la interfaz de creación de pedidos de la interfaz gráfica de usuario)
+> https://tronusdt.xyz/?way=ui (el acceso saltará automáticamente a la interfaz de administración de pedidos)
 
------
+#### Admitimos perfectamente las transferencias internas fuera de la cadena de Binance (admitemos las transacciones internas de Binance):
+Si la dirección de pago de su comerciante es una dirección de billetera en Binance, cuando use way=pay para generar órdenes de pago, asegúrese de que su billetera de Binance esté vinculada al marco tronusdt.
+El propósito de la vinculación es que podemos llamar a la API de Binance a través de la clave para ver información de transacciones en el sitio.
+Si no hay enlace, abra https://tronusdt.xyz/?way=bindui y complete algunos parámetros para enlazar.
+Parámetros necesarios para el enlace: su correo electrónico de contacto (utilizado para notificaciones y visualización de órdenes de pago, etc.), dirección de billetera USDT (debe ser la misma que la dirección de pago de la red USDT-TRC20 en Binance), clave y clave secreta (creada en su backend de Binance).
+Puede aprender cómo obtener claves y claves a través del tutorial en el sitio web oficial de Binance: https://www.binance.com/zh-CN/support/faq/detail/360002502072
+Puedes conocer el tutorial de Binance KEY a través del vídeo: https://tronusdt.xyz/?way=video&video=biankey.mp4
 
-#### Payment and Callback APIs: 
+##### Completo la clave y te la entrego al vincular. ¿Es seguro?
+Las claves y claves secretas recién creadas solo pueden leer los datos básicos de la cuenta de forma predeterminada y no pueden realizar otras operaciones riesgosas como contratos, inversiones, transferencias, etc. en la cuenta de Binance. Solo accedemos a la lista de datos de depósito en USDT de su cuenta de Binance mediante clave y clave. No tenemos permiso para controlar sus otras operaciones en Binance, porque los permisos predeterminados de Binance Key solo pueden leer datos básicos de la cuenta y no tienen permisos para transferencias, transferencias, transacciones, etc., a menos que habilite estos permisos para esta clave en el fondo de administración de API. Estos se mencionan en las políticas de administración de API de Binance y en los documentos de ayuda oficiales de Binance. Si todavía estás preocupado, puedes usar una cuenta de Binance inactiva como cuenta receptora.
+![bind.png](./images/bind.png)  
 
-> [https://tronusdt.xyz/?way=pay\&name=](https://tronusdt.xyz/?way=pay&name=)[name]\&type=[type]\&product=[product]\&value=[value]\&jump=[jump]    
-> (↑Create a collection order, where `name` represents the recipient's wallet address)    
-> [https://tronusdt.xyz/?way=paycheck\&oid=](https://tronusdt.xyz/?way=paycheck&oid=)[oid]     
-> (↑Pass in the order number to determine if payment was successful) 
-> If `way=pay` is created successfully, a field `qrcode` will be returned, which represents a collection QR code image. If it is a frontend interface, you can display the image using the JavaScript syntax: `image.src='data:image/png;base64,'+qrcode`. The returned `oid` represents the order number. You can call `way=paycheck&oid=[oid]` to check if the order has been successfully paid. If the corresponding amount of digital currency is received, the payment is successful, and the returned `status` will be 1. If it is 0, it means unpaid.
-> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui) (Access will automatically redirect to the UI graphical interface order creation interface)    
-> [https://tronusdt.xyz/?way=ui](https://tronusdt.xyz/?way=ui) (Access will automatically redirect to the order backend management interface)    
+##### Respaldamos perfectamente las transferencias fuera de la cadena en el sitio de Binance. Esta es una característica muy útil.
+Cuando los usuarios tradicionales transfieren USDT a las billeteras USDT de los comerciantes, utilizan la red blockchain USDT ordinaria. Habrá una tarifa de renovación. Esta tarifa se determina en función del grado de congestión de la red.
+Cuando usa Binance como la dirección de pago USDT de su comerciante, asumiendo que el usuario también es un usuario de Binance, ***es decir, ambas cuentas USDT pertenecen a Binance, entonces Binance no enviará la transacción a través de la red blockchain USDT, sino que la transferirá dentro de Binance***, es decir, reducirá la operación en una cuenta y realizará la operación en segundo plano de aumentar la cantidad de monedas en la otra cuenta. Esto es muy fácil de hacer para Binance. Además de la rápida velocidad de pago, también existen ventajas como la eliminación de gastos de gestión. Binance y convertiremos esta transacción en una transacción dentro o fuera de la cadena.
+***Dado que este tipo de transferencia de USDT no pasa por la red blockchain de USDT, el navegador blockchain no puede consultarla. Es por eso que algunos usuarios claramente transfirieron USDT a través de Binance de acuerdo con los requisitos de la interfaz de pago, pero el comerciante no generó automáticamente una devolución de llamada. La duda*** es que muchos marcos de recopilación de USDT no admiten este tipo de transferencia fuera de la cadena dentro del sitio. Sin embargo, este marco es perfectamente compatible con este tipo de transacciones dentro o fuera de la cadena de Binance.
+Por supuesto, no hay forma de leer los registros de transacciones fuera de la cadena de una cuenta de Binance a través del marco blockchain. Solo puede interactuar con el backend de Binance. Es por eso que necesitamos la clave de su cuenta de Binance. A través de la Clave, podemos acceder a algunos datos de su cuenta. Luego determine si el pedido se pagó correctamente.
 
-#### We Perfectly Support Binance Internal Off-chain Transfers (We support Binance internal transactions): 
+##### Cuando la dirección de billetera USDT de Binance se utiliza como dirección de pago del comerciante, la orden de pago creada no admite la devolución de llamada totalmente automática auto=async.
+Cabe señalar que la dirección del comerciante Binance USDT no admite auto=async al crear órdenes de pago. Sin embargo, admitimos el modo de devolución de llamada semiautomático, es decir, el modo automático = sí. Los usuarios también pueden enviar manualmente way=paycheck para verificar de forma proactiva. Al acceder a la interfaz de way=paycheck, nos vincularemos a sus datos de Binance USDT a través de la clave y compararemos su información de recarga de Binance USDT para determinar si un usuario del pedido ha pagado correctamente.
+También tenga en cuenta: Cabe señalar que al crear un pedido con la dirección del comerciante Binance USDT, también se admiten pedidos TRX, pero el modo automático solo admite los modos no/sí.
 
-If your merchant collection address is a wallet address on Binance, when using `way=pay` to generate a payment order, please ensure that your Binance wallet has been bound on the tronusdt framework.
-The purpose of binding is that we can use the key to call the Binance API and view some internal transaction information.
-If you haven't bound it, please open [https://tronusdt.xyz/?way=bindui](https://tronusdt.xyz/?way=bindui) and fill in a few parameters to bind.
-Parameters required for binding: Your contact email (used for notifications and viewing payment orders, etc.), USDT wallet address (this must be the same as the collection address on the Binance USDT-TRC20 network), Key and Secret (obtained by creating them in your Binance backend).
-You can learn how to obtain the key and secret through the Binance official website tutorial: [https://www.binance.com/zh-CN/support/faq/detail/360002502072](https://www.binance.com/zh-CN/support/faq/detail/360002502072) 
-You can learn about the Binance KEY tutorial through the video: [https://tronusdt.xyz/?way=video\&video=biankey.mp4](https://tronusdt.xyz/?way=video&video=biankey.mp4) 
+--------------------------------------   
+#### Explicación de superposición de moneda de pago
+De acuerdo con los parámetros técnicos de addvalue en index.js, la cantidad actual de monedas agregadas por USDT es 0,5 y la cantidad de monedas agregadas por vez para TRX es 0,2.
+Es decir, dentro de 15 minutos o en un corto período de tiempo, cuando dos usuarios están listos para pagar 8 USDT, el primer usuario muestra el monto de pago requerido de 8 USDT, mientras que el segundo usuario muestra el monto de pago requerido de 8,5 USDT.
+El propósito de esto es que después de que la billetera reciba las monedas, pueda distinguir qué usuario pagó.
+Dado que el valor de 0,5 USDT no es grande, no constituye un costo de pago real excesivo para los usuarios y, en general, es aceptable.
+Esto se menciona en nuestra explicación completa en video al principio, ubicada aproximadamente a los 44 minutos y 20 segundos del video.
+*** Recuerde a los usuarios que paguen según sea necesario. Con respecto a los criterios para confirmar el pago exitoso, cuando se crea una orden de pago de 8 USDT, llamar a way=pay devuelve valor=8 USDT y la billetera USDT del comerciante recibe [8,0 (inclusive) a 8,5 (8,5 exclusivo)] USDT, entonces la orden del usuario se marcará como un pago exitoso. Cuando se crea una orden de pago de 10 USDT, dado que la cantidad de 10 está ocupada por otros usuarios durante el mismo período, llamar a way=pay devolverá valor=10,5 USDT. Luego, la billetera USDT del comerciante recibe [10,5 (inclusive) a 11,0 (excluyendo 11,0)] USDT, y el pedido del usuario se marcará como un pago exitoso. ***
 
-##### Is it safe to fill in the key and secret to you during binding? 
+#### ¿Cuál es la lista de titulares devuelta?
+La lista de encabezado devuelta al llamar a la orden de pago con cheque way=paycheck representa los primeros 5 registros de transacciones más recientes de la billetera. Tenga en cuenta que si el estado del pedido es pago exitoso (estado = 1), no se mostrará la lista principal. La lista de encabezado se utiliza para la depuración. Si la lista principal muestra una transacción de transferencia, significa que la moneda digital se ha registrado en la plataforma pública blockchain.
 
-Newly created keys and secrets can only read basic account data by default and cannot perform other risky operations on the Binance account such as futures, investment, or transfers. We only access the USDT deposit data list of your Binance account using the key and secret. We do not have the authority to control your other operations on Binance , because the default permission of the Binance Key is only to read basic account data, and does not have transfer, withdrawal, trading, or other permissions, unless you enable these permissions in the API management backend for this Key. These are all mentioned in the Binance API management policy and Binance official help documentation. If you are still worried, you can use an inactive Binance account as your collection account.
- 
+#### Versión de Telegrama
+Para la versión Telegram del robot Telegram, comuníquese conmigo para solicitar el código fuente.
 
-##### We perfectly support Binance's internal off-chain transfers. This is a very useful feature. 
+#### Qué hacer si tu nombre de dominio está bloqueado (Error de acceso al dominio...)
+Actualmente, se puede acceder a nuestros nombres de dominio en Estados Unidos, Japón, Corea del Sur, Singapur, África, China y otros lugares. Si no puede acceder a ellos, comuníquese con nosotros a través del correo electrónico que se encuentra al final de esta página para obtener los nombres de dominio más recientes. O si solo es inaccesible desde China continental, utilice un proxy para resolver el problema. .
+Además, envíe un correo electrónico de RESPALDO con el título y el contenido del correo electrónico a nuestro buzón de correo y le responderemos dentro de las 24 horas para obtener el último nombre de dominio alternativo.
 
-When a traditional user transfers USDT to a merchant's USDT wallet, it goes through the regular USDT blockchain network, which incurs transaction fees. These fees are determined by network congestion.
-When you use Binance as your merchant USDT collection address, and assuming the user is also a Binance user, ***meaning both your USDT accounts belong to Binance, then this type of transfer will not be sent by Binance through the USDT blockchain network, but will be transferred internally within Binance***. That is, a backend operation to decrease the amount in one account and increase the coin amount in the other account. This is very easy for Binance to do. The benefits of this include faster arrival speed and 0 transaction fees. Binance and us refer to this type of transaction as internal or off-chain transactions.
-***Since this type of USDT transfer does not go through the USDT blockchain network, it cannot be queried on blockchain explorers***. This is why some users clearly transferred USDT according to the payment interface requirements on Binance, but the merchant did not automatically receive a callback. ***This is a limitation of many USDT collection frameworks that do not support querying this type of internal off-chain transfer***. However, this framework perfectly supports this type of Binance internal or off-chain transaction.
-Of course, reading the off-chain transaction records of a Binance account cannot be done through a blockchain framework. It can only be done by interacting with the Binance backend. This is why we need your Binance account's Key. Through the Key, we can access a portion of your account data, and then determine whether the order was successfully paid.
+#### ¿Otras funciones y API (necesita otras...)?
+Si las interfaces anteriores no satisfacen sus necesidades, puede visitar el documento abierto API oficial de TRON a continuación para desarrollarlo y acceder a él usted mismo. Para llevar a cabo el desarrollo del sistema blockchain, el desarrollo de cobros de pagos, sugerencias de funciones y comentarios sobre ERRORES, puede contactarme por correo electrónico.
+>https://tron.network
+>Correo electrónico:usdtadmin@protonmail.com
+>Recompensa por patrocinio del USDT:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
 
-##### When using a Binance USDT wallet address as the merchant collection address, created payment orders do not support the fully automatic callback `auto=async`. 
 
-It should be noted that Binance USDT merchant addresses do not support `auto=async` when creating payment orders. However, we support the semi-automatic callback mode, which is the `auto=yes` mode. Users can also manually send `way=paycheck` to actively check. When accessing the `way=paycheck` interface, we will connect to your Binance USDT data using the key. By comparing your Binance USDT deposit information, we can then determine whether a user has successfully paid a certain order.
-Also note: It should be noted that Binance USDT merchant addresses also support TRX orders when creating orders, but **auto** still only supports the **no/yes** two modes.
 
------
+#### Descargo de responsabilidad
+1. tornusdt es el producto API oficial de código abierto de USDT y solo se utiliza para aprendizaje y comunicación.
+2. No se puede utilizar para ningún propósito que viole las leyes y regulaciones de la República Popular China (incluida la provincia de Taiwán) o la región donde se encuentra el usuario.
+3. Porque el propio autor solo ha completado el desarrollo y las actividades de código abierto del código (el código abierto significa que cualquiera puede descargarlo, usarlo o modificarlo y distribuirlo), y nunca ha participado en ninguna operación ni actividad lucrativa de los usuarios.
+4. No sabemos para qué finalidad utilizará posteriormente el usuario el código fuente del programa, por lo que cualquier responsabilidad legal derivada del uso por parte del usuario será asumida por el propio usuario.
 
-#### Amount Overlay and Payment Standard (Payment Currency Overlay Explanation) 
+#### Consejos de advertencia (advertir)
+1. Todos los tokens blockchain involucrados en el proyecto tienen fines de aprendizaje y el autor no está de acuerdo con los atributos financieros de los tokens derivados de blockchain.
+2. Tampoco fomentamos ni apoyamos ninguna "minería", "especulación con monedas", "ICO de moneda virtual" y otras actividades ilegales.
+3. El comportamiento del mercado de la moneda virtual no está sujeto a requisitos ni controles regulatorios, y las transacciones de inversión deben ser cautelosas. Es sólo para aprender conocimientos sobre blockchain.
 
-According to the `addvalue` technical parameter in `index.js`, the current overlay amount is 0.5 for USDT and 0.2 for TRX per payment.
-That is, within 15 minutes or a short period, when two users are both ready to pay 8 USDT, the amount displayed for the first user to pay is 8 USDT, while the amount displayed for the second user to pay is 8.5 USDT.
-The purpose of this is to allow the wallet to distinguish which user made the payment after receiving the coins.
-Since 0.5 USDT is a small amount, it generally does not constitute too much actual payment cost for the user and is generally acceptable.
-This was mentioned in our comprehensive video explanation at the very beginning, around 44 minutes and 20 seconds into the video.
-***Please remind users to pay as required***. ***Regarding the standard for confirming successful payment, when a payment order for 8 USDT is created, and `way=pay` returns `value=8 USDT`, if the merchant's USDT wallet receives [8.0 (inclusive) to 8.5 (exclusive of 8.5)] USDT, the user's order will be marked as successfully paid***. ***When a payment order for 10 USDT is created, and this amount of 10 is occupied by another user in the same period, then `way=pay` will return `value=10.5 USDT`***. ***If the merchant's USDT wallet receives [10.5 (inclusive) to 11.0 (exclusive of 11.0)] USDT, the user's order will be marked as successfully paid.*** 
 
-#### What is the returned `headlist`? 
-
-When calling `way=paycheck` to check a payment order, the returned `headlist` represents the top 5 latest transaction records of the wallet. Note that if the order status is successfully paid (`status=1`), `headlist` is not displayed. `headlist` is used for debugging. If `headlist` shows a transfer transaction, it means the digital currency has been credited on the blockchain public platform.
-
-#### Telegram Version 
-
-You can contact me to request the source code for the Telegram bot version.
-
-#### What to do if the domain is blocked (Domain access error...)? 
-
-Currently, our domain can be accessed in the United States, Japan, South Korea, Singapore, Africa, China, and other places. If you cannot access it, please contact us via the email at the bottom of this page to get the latest domain. Alternatively, if only mainland China cannot access it, you can solve it by using a proxy.
-In addition, send an email with the title and content "BACKUP" to our email address, and we will reply with the latest backup domain within 24 hours.
-
-#### Other Features and APIs (Need other...)? 
-
-If the above interfaces do not meet your needs, you can access the official TRON API open documentation below and develop and integrate it yourself. We undertake blockchain system development, collection development, feature suggestions, and bug feedback. You can contact me via email.
-
-> [https://tron.network](https://tron.network)     
-> Email:usdtadmin@protonmail.com     
-> USDT Sponsorship/Donation:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG    
-
-#### Disclaimer 
-
-1.  tronusdt is an official open-source API product for USDT, intended only for learning and communication purposes\! 
-2.  It must not be used for any purpose that violates the laws and regulations of the People's Republic of China (including Taiwan Province) or the user's local area.
-3.  The author only completed the code development and open-source activities (open source means anyone can download, use, modify, or distribute the code) , and has never participated in any user operations or profit activities.
-4.  Furthermore, the author does not know what purpose the user will use the program source code for later. Therefore, any legal liabilities arising from the user's use are borne by the user themselves.
-
-#### Warning Tips (Warn) 
-
-1.  The blockchain tokens involved in the project are for learning purposes. The author does not approve of the financial attributes derived from blockchain tokens.
-2.  Nor does the author encourage or support any illegal activities such as "mining," "speculative trading," or "virtual currency ICO".
-3.  Virtual currency market behavior is not subject to regulatory requirements and control. Investment and trading require caution and are only for learning blockchain knowledge.
