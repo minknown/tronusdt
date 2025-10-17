@@ -31,13 +31,13 @@ The video tutorial is divided into: payment interface explanation, how to import
 | Approximate start time of video explanation | 3rd minute | 5th minute | 15th minute | 21st minute | Not mentioned in the video | Not mentioned in the video |
 
 ### Quickly test the payment effect:
-URL access to create payment order:
->https://tronusdt.xyz/?way=payui
-(↑Recommended click here)
->https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=Please pay as soon as possible for the additional content at the end of the test
-(↑Create an order directly and enter the payment page)
->way=pay and way=payui are different. The former returns json data to create an order, while the latter shows that in addition to creating an order, it also redirects the page to a payment graphical interface.
->The pay page can be built by yourself, and the source code is PHP and is provided in this warehouse.
+URL access to create payment order:     
+>https://tronusdt.xyz/?way=payui     
+(↑Recommended click here)     
+>https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=some_new__text    
+(↑Create an order directly and enter the payment page)     
+>way=pay and way=payui are different. The former returns json data to create an order, while the latter shows that in addition to creating an order, it also redirects the page to a payment graphical interface.    
+>The pay page can be built by yourself, and the source code is PHP and is provided in this warehouse.    
 
 **Parameter description**
 | Parameter name | Description | Requirement | Example value |
@@ -65,9 +65,9 @@ If an order is generated, a 182 error code is displayed. This is because some un
 If you want to deal with and solve the 182 error code, please change the payment wallet address (that is, change the name parameter to your own address. By default, the newly created wallet does not set the call whitelist and verification password), or if you just experience the payment effect, you can directly use the [UI page] to enter the verification code to skip the 182 verification, and click on the website to experience the payment function: https://tronusdt.xyz/?way=payui
 This is not a necessary option. If you need to set up commercial protection for your address, IP whitelist or create a payment order that requires ownership verification, you can contact us by email to set it up for free.
 
-### Auto parameter automatic callback introduction:
-**** auto has a total of 3 optional values, namely no, yes and async. If auto is empty and not passed, the default is no. ****
->Video explanation of auto parameters: https://tronusdt.xyz/?way=video&video=async.mp4
+### Auto parameter automatic callback introduction:   
+**** auto has a total of 3 optional values, namely no, yes and async. If auto is empty and not passed, the default is no. ****    
+>Video explanation of auto parameters: https://tronusdt.xyz/?way=video&video=async.mp4    
 
 ##### (1)auto=no mode
 The initial mode of this mode. After creating an order, the user needs to manually click the [I have paid] button on the payment interface to initiate an ajax request to check whether the order is paid successfully. If successful, the page will jump.   If the user does not click and the payment page has not been closed, the background will automatically initiate an ajax request to call the [I have paid] button event every few seconds by default. Its essence is to call the way=paycheck interface to actively check whether the order is paid. .
@@ -83,12 +83,12 @@ auto=async provides immediate or near real-time callbacks. But orders in USDT cu
 When querying an order, auto may return two values: asyncing and asyncok. The initial order is async. If auto changes to asyncing, it means that the merchant's digital currency address (name) specified in the order has received the digital currency of this order, but the link system in the jump has not yet read and accessed it. That is to say, the coin is received but no callback is completed. If auto changes to asynok, it means that the merchant's digital currency address (name) has received the digital currency of this order, and the link in the jump has been read and accessed, and the callback is completed.
 
 ****forger description****
-If the callback status auto is forget, it means forgetting, that is, it has been checked multiple times, but the check results are all unpaid, and it will not be checked again, even if it is paid later. The order status is no longer checked and changed. Usually within the order validity period (within 15 minutes), unless auto=no, the system will automatically check. If the check is not paid, it will be checked again multiple times, but if it exceeds 15 minutes, it will no longer be checked. Even if you pay after 15 minutes, the order status will not be changed to success (status=1).
+If the callback status auto is forget, it means forgetting, that is, it has been checked multiple times, but the check results are all unpaid, and it will not be checked again, even if it is paid later. The order status is no longer checked and changed. Usually within the order validity period (within 15 minutes), unless auto=no, the system will automatically check. If the check is not paid, it will be checked again multiple times, but if it exceeds 15 minutes, it will no longer be checked. Even if you pay after 15 minutes, the order status will not be changed to success (status=1).   
 
 ****Other instructions****
 In addition to this, our server may call the jump URL multiple times. Therefore, if it is a recharge type that increases the amount, please pay attention to the callback URL and be prepared to prevent accidents.
 When auto=no, jump is the page jump address. If auto is yes or async, jump usually represents the background callback URL. Once the digital currency is received, we will automatically call back and access the URL link on the jump.
-In addition, we may not perform auto automatic order payment status checking after more than 15 minutes. This is because it is unnecessary and our order validity period is also within 15 minutes.
+In addition, we may not perform auto automatic order payment status checking after more than 15 minutes. This is because it is unnecessary and our order validity period is also within 15 minutes.    
 
 
 ### I know other programming languages, how can I build my own payment system?
@@ -99,68 +99,68 @@ During the entire development process, it doesn’t matter if you are not famili
 You can construct your own payment collection system within 1 hour, using your own familiar programming language.
 
 ### I don’t know any programming language, how can I build my own payment system?
- 
-If you don’t even know a programming language, it doesn’t matter. There are two solutions:
-+ The first method is to show the content and interface of this page to a programmer, and he can quickly build a payment system, which does not require high programming skills. Development costs are very low
-+ The second option is to use our existing system, https://tronusdt.xyz/?way=payui.php?name=.... to splice your payment link and send it to others for payment.
+  
+If you don’t even know a programming language, it doesn’t matter. There are two solutions:   
++ The first method is to show the content and interface of this page to a programmer, and he can quickly build a payment system, which does not require high programming skills. Development costs are very low    
++ The second option is to use our existing system, https://tronusdt.xyz/?way=payui.php?name=.... to splice your payment link and send it to others for payment.    
 
 --------------------------
 
 ### Other interface descriptions
 (English: Access must be done POST and HTTPS.)
-The following interfaces must **use HTTPS headers and be accessed in POST mode**, and a few also support GET.
-Call rate: 15QPS per second, the interface is stable and available for a long time.
-This is why wcode is clearly passed in, but it keeps prompting that the parameter wcode needs to be passed in. This is because your calling method is get.
+The following interfaces must **use HTTPS headers and be accessed in POST mode**, and a few also support GET.     
+Call rate: 15QPS per second, the interface is stable and available for a long time.     
+This is why wcode is clearly passed in, but it keeps prompting that the parameter wcode needs to be passed in. This is because your calling method is get.   
 
 #### 1. Real-time currency exchange rate query API:
 （英文:Real time currency price and exchange rate query interface）
 > https://tronusdt.xyz/?way=price&coin=btc
 
-Note: If accessed via POST, if accessed via GET, it will prompt that the coin parameter is missing (the same applies to the following interfaces).
-![a.png](./images/a.png)  
-Among them, high24h represents the highest transaction price within 24 hours, and change24h represents the 24-hour increase and other information. lastPr represents the latest RMB price.
+Note: If accessed via POST, if accessed via GET, it will prompt that the coin parameter is missing (the same applies to the following interfaces).   
+![a.png](./images/a.png)    
+Among them, high24h represents the highest transaction price within 24 hours, and change24h represents the 24-hour increase and other information. lastPr represents the latest RMB price.   
 
 #### Generate wallet API:
-(English: To generate a free USDT wallet)
-（英文:Here we have obtained the 'wcode' that will be used later）
-> https://tronusdt.xyz/?way=creat&mail=[mail]
+(English: To generate a free USDT wallet)   
+（英文:Here we have obtained the 'wcode' that will be used later）   
+> https://tronusdt.xyz/?way=creat&mail=[mail]   
 Note: Please replace [mail] above with your email address. This email address can later be used to log in to the backend to view all created payment orders. Used to manage credentials and other functions.
-Please be sure to record the wallet address, private key, and wcode returned by the call (to be used later).
-The 12-word mnemonic phrase is not returned here, but it doesn't matter. You can also convert the private key into word phrases through code. There are code tutorials online.
-**The generated private key is recorded and can be used for automatic collection, or it can be imported into other well-known digital currency wallets such as imtoken, Bestwallet, Binance, etc. You can operate the wallet on the graphical interface, check the balance, transfer transactions, etc. **
-**Just download and install any of the APPs listed below. Of course, you are not limited to these two. Anyway, remember to have the private key: your wallet can be restored and displayed anywhere. **
->https://imtoken.im (It may not be open in mainland China. After opening it, download a new wallet and import the key to use)
->https://tronusdt.xyz/?way=imtoken (detailed tutorial on using imtoken, including Android installation package apk)
->https://bestwallet.com/ (Open it, download the new wallet, import the key and use it)
+Please be sure to record the wallet address, private key, and wcode returned by the call (to be used later).  
+The 12-word mnemonic phrase is not returned here, but it doesn't matter. You can also convert the private key into word phrases through code. There are code tutorials online.   
+**The generated private key is recorded and can be used for automatic collection, or it can be imported into other well-known digital currency wallets such as imtoken, Bestwallet, Binance, etc. You can operate the wallet on the graphical interface, check the balance, transfer transactions, etc. **  
+**Just download and install any of the APPs listed below. Of course, you are not limited to these two. Anyway, remember to have the private key: your wallet can be restored and displayed anywhere. **  
+>https://imtoken.im (It may not be open in mainland China. After opening it, download a new wallet and import the key to use)   
+>https://tronusdt.xyz/?way=imtoken (detailed tutorial on using imtoken, including Android installation package apk)   
+>https://bestwallet.com/ (Open it, download the new wallet, import the key and use it)  
 
 
 #### View wallet balance and other information API:
-（英文:To query the balance and information of the wallet's various items）
-> https://tronusdt.xyz/?way=info&wcode=[wcode]
-The wcode is what was returned when you previously called way=creat to create a wallet. balance_trx represents the remaining TRX balance in the wallet, balance_usdt represents the USDT balance, and other information will not be explained here.
+（英文:To query the balance and information of the wallet's various items）   
+> https://tronusdt.xyz/?way=info&wcode=[wcode]   
+The wcode is what was returned when you previously called way=creat to create a wallet. balance_trx represents the remaining TRX balance in the wallet, balance_usdt represents the USDT balance, and other information will not be explained here.  
 
 #### USDT transfer API (Transfer for USDT):
-> https://tronusdt.xyz/?way=send&wcode=[wcode]&to=[to]&value=[value]
-to represents the wallet address of the payee, value represents the transfer amount, and the transfer fee is 8-10TRX. That’s right, transferring USDT consumes TRX.
+> https://tronusdt.xyz/?way=send&wcode=[wcode]&to=[to]&value=[value]   
+to represents the wallet address of the payee, value represents the transfer amount, and the transfer fee is 8-10TRX. That’s right, transferring USDT consumes TRX.   
 
 #### TRX transfer API (Transfer for TRX):
-> https://tronusdt.xyz/?way=sendtrx&wcode=[wcode]&to=[to]&value=[value]
-to represents the wallet address of the payee, value represents the transfer amount, and the transfer fee is 0-1TRX.
+> https://tronusdt.xyz/?way=sendtrx&wcode=[wcode]&to=[to]&value=[value]    
+to represents the wallet address of the payee, value represents the transfer amount, and the transfer fee is 0-1TRX.    
 
 #### Query transaction record API (show transaction list):
-> https://tronusdt.xyz/?way=list&wcode=[wcode] (query USDT transaction records)
-> https://tronusdt.xyz/?way=listtrx&wcode=[wcode] (query TRX transaction records)
+> https://tronusdt.xyz/?way=list&wcode=[wcode] (query USDT transaction records)    
+> https://tronusdt.xyz/?way=listtrx&wcode=[wcode] (query TRX transaction records)     
 
 --------------------------
 
 #### APIs supported for payment collection (Payment and callback APIs):
-> https://tronusdt.xyz/?way=pay&name=[name]&type=[type]&product=[product]&value=[value]&jump=[jump]
-(↑Create a payment order, where name represents the payee’s wallet address)
-> https://tronusdt.xyz/?way=paycheck&oid=[oid]
+> https://tronusdt.xyz/?way=pay&name=[name]&type=[type]&product=[product]&value=[value]&jump=[jump]    
+(↑Create a payment order, where name represents the payee’s wallet address)    
+> https://tronusdt.xyz/?way=paycheck&oid=[oid]   
 (↑Input the order number to determine whether the payment is successful)
-If way=pay is successfully created, it will return a qrcode field, which represents a payment QR code image. If it is a front-end interface, use JavaScript syntax: image.src='data:image/png;base64,'+qrcode to display the image. The oid returned at the same time represents the order number. You can call way=paycheck&oid=[oid] to check whether the order has been paid successfully. If the corresponding amount of digital currency is received, the payment is successful and the returned status will be 1. If it is 0, it means it has not been paid.
-> https://tronusdt.xyz/?way=payui (access will automatically jump to the order creation interface of the UI graphical interface)
-> https://tronusdt.xyz/?way=ui (access will automatically jump to the order backend management interface)
+If way=pay is successfully created, it will return a qrcode field, which represents a payment QR code image. If it is a front-end interface, use JavaScript syntax: image.src='data:image/png;base64,'+qrcode to display the image. The oid returned at the same time represents the order number. You can call way=paycheck&oid=[oid] to check whether the order has been paid successfully. If the corresponding amount of digital currency is received, the payment is successful and the returned status will be 1. If it is 0, it means it has not been paid.       
+> https://tronusdt.xyz/?way=payui (access will automatically jump to the order creation interface of the UI graphical interface)      
+> https://tronusdt.xyz/?way=ui (access will automatically jump to the order backend management interface)     
 
 #### We perfectly support Binance internal off-chain transfers (We support Binance internal transactions):
 If your merchant's payment address is a wallet address on Binance, when using way=pay to produce payment orders, please make sure that your Binance wallet has been bound to the tronusdt framework.
@@ -206,8 +206,8 @@ In addition, send a BACKUP email with the email title and content to our mailbox
 #### Other functions and APIs (Need other...)?
 If the above interfaces do not meet your needs, you can visit TRON’s official API open document below to develop and access it yourself. To undertake blockchain system development, payment collection development, function suggestions, and BUG feedback, you can contact me by email.
 >https://tron.network
->Email:usdtadmin@protonmail.com
->USDT sponsorship reward:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
+>Email:usdtadmin@protonmail.com   
+>USDT sponsorship reward:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG   
 
 
 
