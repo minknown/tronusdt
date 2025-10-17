@@ -1,5 +1,4 @@
-More Language (多语言阅读本文文档)
-
+# More Language (多语言阅读本文文档)
 [English(英文)](./README_English.md)    
 [Arabic(Legha Al-arabia)](./README_Arabic.md)[اللغة العربية]       
 [Español(Castellano)](./README_Español.md)    
@@ -7,9 +6,13 @@ More Language (多语言阅读本文文档)
 [Russian(Русский язык)](./README_Russian.md)    
 [日本語Janpan(にほんご/にっぽんご)](./README_Japanese.md)    
 [繁體中文(Traditional Chinese)](./README_Tradionnal_Chinese.md)    
+This is a virtual digital currency payment framework that can be quickly accessed, allowing your website to have USDT payment functionality without the need for blockchain knowledge.     
+Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.      
+यह एक तेजी से सुलभ आभासी डिजिटल मुद्रा पैसे प्राप्त करने का ढांचा है जो आपकी वेबसाइट को ब्लॉकचेन ज्ञान के बिना USDT पैसे प्राप्त करने क     
+Este es un marco de cobro de moneda digital virtual con acceso rápido, lo que permite a su sitio web tener la función de cobro usdt sin conocimiento de cadena de bloques.    
+ブロックチェーンの知識を必要とせずに、WebサイトにUSDT入金機能を持たせることができる仮想デジタル通貨入金フレームワークです。   
+Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.     
 
-
-اللغة العربية
 # tronusdt
 主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。     
 **(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解)**  
