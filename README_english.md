@@ -25,9 +25,9 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 #### 视频教程（Tutorial Video） 
 
-[Video tutorial: Click here to play online - Comprehensive tutorial of this framework](https://tronusdt.xyz/?way=video&video=tron.mp4) 
-[Video tutorial: Taking Python as an example, experience 3-minute high-speed access](https://tronusdt.xyz/?way=video&video=easy.mp4) 
-[Our presentation on Youtube, with both Chinese and English subtitles](https://www.youtube.com/watch?v=raqksD9EOOs) 
+[Video tutorial: Click here to play online - Comprehensive tutorial of this framework](https://tronusdt.xyz/?way=video&video=tron.mp4)     
+[Video tutorial: Taking Python as an example, experience 3-minute high-speed access](https://tronusdt.xyz/?way=video&video=easy.mp4)     
+[Our presentation on Youtube, with both Chinese and English subtitles](https://www.youtube.com/watch?v=raqksD9EOOs)     
 
 The video tutorial is divided into: explanation of the payment interface, how to import the key into the APP, explanation of the overlay of decimal places, and other Q\&A. Users of Easy Language can skip ahead.
 (The source codes below are demonstrated in the video tutorial, you can skip directly to the programming language you are familiar with to watch and understand) .
