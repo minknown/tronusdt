@@ -135,7 +135,7 @@ This is why even if `wcode` is clearly passed in, it keeps prompting that the pa
 
 （英文:Real time currency price and exchange rate query interface） 
 
-> [https://tronusdt.xyz/?way=price\&coin=btc](https://tronusdt.xyz/?way=price&coin=btc) 
+> [https://tronusdt.xyz/?way=price\&coin=btc](https://tronusdt.xyz/?way=price&coin=btc)    
 
 Note: Access with POST. If accessed with GET, it will prompt that the `coin` parameter is missing (the same applies to the interfaces below).
  
@@ -160,35 +160,35 @@ Where `high24h` represents the highest transaction price within 24 hours, and `c
 
 （英文:To query the balance and information of the wallet's various items） 
 
-> [https://tronusdt.xyz/?way=info\&wcode=](https://tronusdt.xyz/?way=info&wcode=)[wcode] 
+> [https://tronusdt.xyz/?way=info\&wcode=](https://tronusdt.xyz/?way=info&wcode=)[wcode]    
 > `wcode` is what was returned when you called `way=creat` to create the wallet. `balance_trx` represents the remaining TRX balance in the wallet, and `balance_usdt` represents the USDT balance. There is other information not explained here.
 
 #### USDT Transfer API (Transfer for USDT): 
 
-> [https://tronusdt.xyz/?way=send\&wcode=](https://tronusdt.xyz/?way=send&wcode=)[wcode]\&to=[to]\&value=[value] 
+> [https://tronusdt.xyz/?way=send\&wcode=](https://tronusdt.xyz/?way=send&wcode=)[wcode]\&to=[to]\&value=[value]    
 > `to` represents the recipient's wallet address, and `value` represents the transfer amount. The transfer fee is 8-10 TRX. That's right, transferring USDT consumes TRX.
 
 #### TRX Transfer API (Transfer for TRX): 
 
-> [https://tronusdt.xyz/?way=sendtrx\&wcode=](https://tronusdt.xyz/?way=sendtrx&wcode=)[wcode]\&to=[to]\&value=[value] 
+> [https://tronusdt.xyz/?way=sendtrx\&wcode=](https://tronusdt.xyz/?way=sendtrx&wcode=)[wcode]\&to=[to]\&value=[value]    
 > `to` represents the recipient's wallet address, and `value` represents the transfer amount. The transfer fee is 0-1 TRX.
 
 #### Query Transaction Record API (show transaction list): 
 
-> [https://tronusdt.xyz/?way=list\&wcode=](https://tronusdt.xyz/?way=list&wcode=)[wcode] (Query USDT transaction record) 
-> [https://tronusdt.xyz/?way=listtrx\&wcode=](https://tronusdt.xyz/?way=listtrx&wcode=)[wcode] (Query TRX transaction record) 
+> [https://tronusdt.xyz/?way=list\&wcode=](https://tronusdt.xyz/?way=list&wcode=)[wcode] (Query USDT transaction record)       
+> [https://tronusdt.xyz/?way=listtrx\&wcode=](https://tronusdt.xyz/?way=listtrx&wcode=)[wcode] (Query TRX transaction record)      
 
 -----
 
 #### Payment and Callback APIs: 
 
-> [https://tronusdt.xyz/?way=pay\&name=](https://tronusdt.xyz/?way=pay&name=)[name]\&type=[type]\&product=[product]\&value=[value]\&jump=[jump] 
-> (↑Create a collection order, where `name` represents the recipient's wallet address) 
-> [https://tronusdt.xyz/?way=paycheck\&oid=](https://tronusdt.xyz/?way=paycheck&oid=)[oid] 
+> [https://tronusdt.xyz/?way=pay\&name=](https://tronusdt.xyz/?way=pay&name=)[name]\&type=[type]\&product=[product]\&value=[value]\&jump=[jump]    
+> (↑Create a collection order, where `name` represents the recipient's wallet address)    
+> [https://tronusdt.xyz/?way=paycheck\&oid=](https://tronusdt.xyz/?way=paycheck&oid=)[oid]     
 > (↑Pass in the order number to determine if payment was successful) 
 > If `way=pay` is created successfully, a field `qrcode` will be returned, which represents a collection QR code image. If it is a frontend interface, you can display the image using the JavaScript syntax: `image.src='data:image/png;base64,'+qrcode`. The returned `oid` represents the order number. You can call `way=paycheck&oid=[oid]` to check if the order has been successfully paid. If the corresponding amount of digital currency is received, the payment is successful, and the returned `status` will be 1. If it is 0, it means unpaid.
-> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui) (Access will automatically redirect to the UI graphical interface order creation interface) 
-> [https://tronusdt.xyz/?way=ui](https://tronusdt.xyz/?way=ui) (Access will automatically redirect to the order backend management interface) 
+> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui) (Access will automatically redirect to the UI graphical interface order creation interface)    
+> [https://tronusdt.xyz/?way=ui](https://tronusdt.xyz/?way=ui) (Access will automatically redirect to the order backend management interface)    
 
 #### We Perfectly Support Binance Internal Off-chain Transfers (We support Binance internal transactions): 
 
@@ -244,9 +244,9 @@ In addition, send an email with the title and content "BACKUP" to our email addr
 
 If the above interfaces do not meet your needs, you can access the official TRON API open documentation below and develop and integrate it yourself. We undertake blockchain system development, collection development, feature suggestions, and bug feedback. You can contact me via email.
 
-> [https://tron.network](https://tron.network) 
-> Email:usdtadmin@protonmail.com 
-> USDT Sponsorship/Donation:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG 
+> [https://tron.network](https://tron.network)     
+> Email:usdtadmin@protonmail.com     
+> USDT Sponsorship/Donation:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG    
 
 #### Disclaimer 
 
