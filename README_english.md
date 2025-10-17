@@ -37,18 +37,18 @@ The video tutorial is divided into: explanation of the payment interface, how to
 | Is reference source code provided on Github | Yes | Yes | Yes | Yes | Yes | No |
 | Video explanation approximate start time | 3rd minute | 5th minute | 15th minute | 21st minute | Not mentioned in the video | Not mentioned in the video |
 
-### Quick Test Collection Effect: [cite: 13]
+### Quick Test Collection Effect: 
 
-URL access to create a payment order: [cite: 13]
+URL access to create a payment order: 
 
-> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui) [cite: 13]
-> (↑Recommended to click here) [cite: 13]
-> [https://tronusdt.xyz/?way=payui\&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG\&type=usdt\&product=buy\_apple\&value=5\&jump=3421664\&auto=no\&note=测试尾部追加内容请尽快支付](https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=测试尾部追加内容请尽快支付) [cite: 13]
-> (↑Directly create an order and enter the payment page) [cite: 13]
-> way=pay is different from way=payui[cite: 13]. The former returns JSON data to create the order, while the latter, in addition to creating the order, redirects the page to a payment graphical interface[cite: 13].
-> The pay page can be built by yourself, the PHP source code is provided in this repository[cite: 13].
+> [https://tronusdt.xyz/?way=payui](https://tronusdt.xyz/?way=payui)   
+> (↑Recommended to click here)    
+> [https://tronusdt.xyz/?way=payui&name=TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG&type=usdt&product=buy_apple&value=5&jump=3421664&auto=no&note=some_new_text_content]    
+> (↑Directly create an order and enter the payment page) 
+> way=pay is different from way=payui. The former returns JSON data to create the order, while the latter, in addition to creating the order, redirects the page to a payment graphical interface.
+> The pay page can be built by yourself, the PHP source code is provided in this repository.
 
-**Parameter Description** [cite: 13]
+**Parameter Description** 
 
 | Parameter Name | Description | Required | Example Value |
 | ---- | ---- | ---- | ---- |
