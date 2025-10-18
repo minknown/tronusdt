@@ -1,5 +1,6 @@
 # More Language (多语言阅读本文文档)
-[English(英文)](./README_English.md)    
+[English(英文)](https://github.com/minknown/usdtpay/)    
+[English(英文)](./README_English.md)   
 [Arabic(Legha Al-arabia)](./README_Arabic.md)[اللغة العربية]       
 [Español(Castellano)](./README_Español.md)    
 [Hindī(हिन्दी或हिंदी)](./README_Hind%C4%AB.md)    
