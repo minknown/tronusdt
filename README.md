@@ -12,12 +12,12 @@ This is a virtual digital currency payment framework that can be quickly accesse
 यह एक तेजी से सुलभ आभासी डिजिटल मुद्रा पैसे प्राप्त करने का ढांचा है जो आपकी वेबसाइट को ब्लॉकचेन ज्ञान के बिना USDT पैसे प्राप्त करने क     
 Este es un marco de cobro de moneda digital virtual con acceso rápido, lo que permite a su sitio web tener la función de cobro usdt sin conocimiento de cadena de bloques.    
 ブロックチェーンの知識を必要とせずに、WebサイトにUSDT入金機能を持たせることができる仮想デジタル通貨入金フレームワークです。   
-Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.     
+Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.      
 
 # tronusdt
 主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。     
 **(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解)**  
-**(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入)**      
+**(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入) **      
 
 ### 框架优势
 1:提供源码：目前提供了PHP源码(payui.php)和其他主流源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
@@ -33,7 +33,7 @@ The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT s
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thank you!
 
-#### 视频教程（Tutorial Video）  
+#### 视频教程（Tutorial Video）   
 [视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
 [视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)    
 [我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
