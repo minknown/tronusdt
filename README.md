@@ -16,7 +16,7 @@ Este es un marco de cobro de moneda digital virtual con acceso rápido, lo que p
 
 # tronusdt
 主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。     
-**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解)   **  
+**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解哈呢)   **  
 **(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入) **      
 
 ### 框架优势
@@ -24,7 +24,7 @@ Este es un marco de cobro de moneda digital virtual con acceso rápido, lo que p
 2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有129个商家使用本框架集成USDT插件进行收款或钱包开发。    
 3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
 4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
-5:全新升级了所有兼容USDT各项协议，是最好用的USDT支付框架。。   
+5:全新升级了所有兼容USDT各项协议，是最好用的USDT支付最新框架。。。   
 
 ### 英文说明:
 Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
