@@ -33,6 +33,11 @@ The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT s
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thank you!
 
+
+#### 官网首页（Tutorial Video）   
+[tronusdt.xyz](https://tronusdt.xyz)   
+(已支持收款后电报飞机通知、或微信通知、以及支持手机通知栏提示等功能，请在订单管理后台设置即可。)     
+
 #### 视频教程（Tutorial Video）   
 [视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
 [视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)    
@@ -70,7 +75,7 @@ URL访问以创建支付订单：
 | note | 新版新增参数:支持在支付页面底部追加html代码或文字，长度不很长一般问题不大仅支持GET传入 | 否 | 请尽快支付有问题联系客服 |   
 
 **注意:**  
-+ name参数的钱包必须为通过tronusdt系统构建的钱包，或者也可以是您的币安USDT钱包地址(TRC20)。如果您想创建钱包，在way=creat接口或测试页面上点击创建钱包即可免费获得一个钱包，您可将私钥保存并导入到Imtoken，即可浏览钱包余额并进行转账等其他操作。  如果您想使用您的币安钱包作为USDT商家收款地址，创建订单前先 https://tronusdt.xyz/?way=bindui  进行币安钱包绑定。   
++ name参数的钱包必须为通过tronusdt系统构建的钱包，或者也可以是您的币安USDT钱包地址(TRC20)。如果您想创建钱包，在way=creat接口或测试页面上点击创建钱包即可免费获得一个钱包，您可将私钥保存并导入到Imtoken，即可浏览钱包余额并进行转账等其他操作。  如果您想使用您的币安钱包和自有钱包作为USDT商家收款地址，创建订单前先 https://tronusdt.xyz/?way=bind  进行币安钱包绑定。   
 + jump参数可填写为一个网址，则必须为http开头，它将在收款成功后进行页面跳转，如果您启动auto为回调模式(async/yes)，JUMP则代表后台回调URL。也可填写为一句话或一个商品卡密，它将在收款成功后显示出来。如您不懂此参数可以直接填写-，但不能留空。
 + 您可以将本仓库的payui.php源码复制到您的服务器，自行部署即可，且可以设置收款成功后自己的业务逻辑，比如支付后发送短信通知等均可以实现（JavaScript处）。
 + about仅做显示，意义不大。service是客服链接，不建议太长的网址或者包含&否则可能报错，建议填写邮箱即可。  
@@ -181,7 +186,7 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 #### 我们完美支持币安站内链下转账（We support Binance internal transactions）:
 如果您的商家收款地址为币安上的钱包地址，在使用way=pay生产支付订单时，请确保您的币安钱包已经在tronusdt本框架上绑定过了。
 绑定的作用是，我们可以通过key调用币安API，查看一些站内交易信息。      
-如果没有绑定，请打开 https://tronusdt.xyz/?way=bindui 填写几个参数即可绑定。   
+如果没有绑定，请打开 https://tronusdt.xyz/?way=bind 选择币安后填写几个参数即可绑定。   
 绑定所需参数：您的联系邮箱（用于通知和查看支付订单等）、USDT钱包地址（这个必须和币安上USDT-TRC20网络的收款地址一样）、Key和密钥（在您的币安后台创建得到）。   
 您可以通过币安官网的教程了解如何获取key和密钥:https://www.binance.com/zh-CN/support/faq/detail/360002502072   
 您可以通过视频了解币安KEY的教程：https://tronusdt.xyz/?way=video&video=biankey.mp4    
