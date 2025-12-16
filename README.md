@@ -35,8 +35,12 @@ All interfaces must be accessed through POST, otherwise it is likely to prompt f
 
 
 #### 官网首页（Tutorial Video）   
-[tronusdt.xyz](https://tronusdt.xyz)   
-(已支持收款后电报飞机通知、或微信通知、以及支持手机通知栏提示等功能，请在订单管理后台设置即可。)     
+[tronusdt.xyz](https://tronusdt.xyz)    
+(已支持收款后电报飞机通知、或微信通知、以及支持手机通知栏提示等功能，请在订单管理后台设置即可。)       
+
+(新增回调安全，paycheck接口访问时，在auto=回调模式时，返回的jump为源回调域名后payok.php，而不是原来的回调URL，确保回调地址不被客户用户看到。但实际不影响回调URL，请到订单后台可看到真实回调网址)     
+(2025年12月17日更新：新增界面皮肤，支付页可以自己写，也可以用我们的，支持多款皮肤，在订单后台切换即可，无需编写代码，)    
+[点此播放皮肤切换教程](https://tronusdt.xyz/?way=video&video=skin.mp4)      
 
 #### 视频教程（Tutorial Video）   
 [视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
@@ -69,7 +73,6 @@ URL访问以创建支付订单：
 | value  | 收款的货币的数量,必须大于等于1 | 是 | 5.0 | 
 | jump  | 支付成功后提示的信息或跳转的网址或回调URL | 是 | https://baidu.com | 
 | about  | 大约法币金额的显示(非数字币),可不填 | 否 | $32.00 | 
-| service | 客服链接的显示(可https网址),可不填 | 否 | mailto:yuminhong@gamil.com |   
 | auto  | 是否启用自动回调,仅支持yes或者async或者填no | 否 | no | 
 | namepass | 新版新增参数:如果您的地址已创建商业保护，则需传入该密码参数才能生成支付订单,默认新地址可不填 | 否 | 35974982 |   
 | note | 新版新增参数:支持在支付页面底部追加html代码或文字，长度不很长一般问题不大仅支持GET传入 | 否 | 请尽快支付有问题联系客服 |   
