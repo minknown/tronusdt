@@ -11,7 +11,7 @@
 5:支持站内：完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
 6:兼容性高：涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持网站、APP、小程序，移动端和PC。编程语言PHP、Java、Python、Go、Node等全部支持。    
 
-# More Language 
+# 多语言阅读（More Language ）   
 [English Version A(英文A版本)](https://github.com/minknown/usdtpay/)    
 [English Version B(英文B版本)](./README_English.md)   
 [Arabic(Legha Al-arabia)](./README_Arabic.md)[اللغة العربية]       
@@ -212,12 +212,11 @@ paycheck接口访问时，在auto=回调模式时(auto不等于no一般都为回
 
 #### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
->https://tron.network  
->Email:https://tronusdt.xyz/?way=help
-
-**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过页面的的邮箱联系我们即可，感谢理解哈呢)   **  
+>官网页面：https://tron.network  
+>客服页面: https://tronusdt.xyz/?way=help
+**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过上述的客服页面的的邮箱联系我们即可，感谢理解哈呢)   **  
  
-#### 框架热度（Disclaimer）
+#### 框架热度（Star Hitory）
 [![Star History Chart](https://api.star-history.com/svg?repos=minknown/tronusdt&type=Date)](https://star-history.com/#minknown/tronusdt&Date)
 
 #### 免责声明（Disclaimer）
