@@ -217,6 +217,8 @@ paycheck接口访问时，在auto=回调模式时(auto不等于no一般都为回
 
 **(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过页面的的邮箱联系我们即可，感谢理解哈呢)   **  
  
+#### 框架热度（Disclaimer）
+[![Star History Chart](https://api.star-history.com/svg?repos=minknown/tronusdt&type=Date)](https://star-history.com/#minknown/tronusdt&Date)
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
