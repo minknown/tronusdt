@@ -1,3 +1,13 @@
+# tronusdt
+主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。    
+项目官网：https://tronusdt.xyz   
+
+### 框架优势
+1:提供源码：目前提供了PHP源码(payui.php)以及其它主流类源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
+2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有479个商家使用本框架集成USDT插件进行收款或钱包开发。    
+3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
+4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
+
 # More Language (多语言阅读本文文档)
 [English Version A(英文A版本)](https://github.com/minknown/usdtpay/)    
 [English Version B(英文B版本)](./README_English.md)   
@@ -7,53 +17,21 @@
 [Russian(Русский язык)](./README_Russian.md)    
 [日本語Janpan(にほんご/にっぽんご)](./README_Japanese.md)    
 [繁體中文(Traditional Chinese)](./README_Tradionnal_Chinese.md)    
-This is a virtual digital currency payment framework that can be quickly accessed, allowing your website to have USDT payment functionality without the need for blockchain knowledge.     
+This is a virtual digital currency payment framework that can be quickly accessed, allowing your website to have USDT payment functionality without the need for blockchain knowledge.    
 Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.      
 यह एक तेजी से सुलभ आभासी डिजिटल मुद्रा पैसे प्राप्त करने का ढांचा है जो आपकी वेबसाइट को ब्लॉकचेन ज्ञान के बिना USDT पैसे प्राप्त करने क     
 Este es un marco de cobro de moneda digital virtual con acceso rápido, lo que permite a su sitio web tener la función de cobro usdt sin conocimiento de cadena de bloques.    
 ブロックチェーンの知識を必要とせずに、WebサイトにUSDT入金機能を持たせることができる仮想デジタル通貨入金フレームワークです。   
 Это быстро доступная система сбора виртуальных цифровых валют, которая позволяет вашему веб - сайту иметь функцию сбора USDT без знания блокчейна.      
-
-# tronusdt
-主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。下述USDT均指USTD-TRC20形式的USDT。TRX币和USDT共用同个收款地址的。     
-**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解哈呢)   **  
-**(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入) **      
-
-### 框架优势
-1:提供源码：目前提供了PHP源码(payui.php)以及其它主流类源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
-2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有479个商家使用本框架集成USDT插件进行收款或钱包开发。    
-3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
-4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
-5:全新升级了所有兼容USDT各项协议，是最好用的USDT支付最新框架。。。   
-
-### 英文说明:
 Rapid development of USDT wallet and collection, including web interface for transfer/callback.  
 At present, the PHP source code is provided, which is the payui.exe file on this page. Yes, only one file and about 200 lines of code are needed to run this payment system.   
 The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.  
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thank you!
 
-
-#### 官网首页（Tutorial Video）   
-[tronusdt.xyz](https://tronusdt.xyz)    
-(已支持收款后电报飞机通知、或微信通知、以及支持手机通知栏提示等功能，请在订单管理后台设置即可。)       
-
 (新增回调安全，paycheck接口访问时，在auto=回调模式时，返回的jump为源回调域名后payok.php，而不是原来的回调URL，确保回调地址不被客户用户看到。但实际不影响回调URL，请到订单后台可看到真实回调网址)     
-(2025年12月17日更新：新增界面皮肤，支付页可以自己写，也可以用我们的，支持多款皮肤，在订单后台切换即可，无需编写代码，)    
-[点此播放皮肤切换教程](https://tronusdt.xyz/?way=video&video=skin.mp4)      
+(2025年12月17日更新：新增界面皮肤，支付页可以自己写，也可以用我们的，支持多款皮肤，在订单后台切换即可，无需编写代码，) 
 
-#### 视频教程（Tutorial Video）   
-[视频教程:点此在线播放-本框架综合教程](https://tronusdt.xyz/?way=video&video=tron.mp4)     
-[视频教程:以Python为例,体验3分钟极速接入](https://tronusdt.xyz/?way=video&video=easy.mp4)    
-[我们在Youtube的演示,带中英双字幕版本](https://www.youtube.com/watch?v=raqksD9EOOs)  
-
-视频教程分为:支付接口讲解、将密钥导入APP使用方法、尾数叠加解释等问题解答。易语言的可自行跳过即可。    
-(在视频教程内均有以下源码的展示，可直接跳到您熟悉的编程语言进行播放了解。。)  
-
-|  编程语言   | PHP  | JavaScript  |  Python  |  易语言  |  Java  |  C++  |
-|  ----  | ----  |   ----  |  ----  |  ----  |  ----  |  ----  |
-|  Github是否提供参考源码  | 是  |   是  |  是  |  是   |  是  |  否  |
-|  视频讲解大约开始时间  | 第3分钟  |   第5分钟  |  第15分钟  |  第21分钟   |  视频内未提及  |  视频内未提及  |
 
 ### 快速测试收款效果:
 URL访问以创建支付订单：
@@ -233,7 +211,8 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 >Email:usdtadmin@protonmail.com  
 >USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
 
-
+**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解哈呢)   **  
+**(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入) **    
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
