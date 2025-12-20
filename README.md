@@ -1,14 +1,16 @@
 # tronusdt
-主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。    
+主要功能:这个框架用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，只要会调用HTTP请求就能对接成功，设计宗旨是让每个人在5分钟内完成所有接入。
 项目官网：https://tronusdt.xyz   
+视频教程：https://tronusdt.xyz?way=video   
 
-### 框架优势
-1:提供源码：目前提供了PHP源码(payui.php)以及其它主流类源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
-2:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有479个商家使用本框架集成USDT插件进行收款或钱包开发。    
-3:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
+# 框架优势
+1:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。     
+2:提供源码：目前提供了PHP源码(payui.php)以及其它主流类源码都有提供，没错每种编程语言只需要1个文件，20行左右代码，即可运行这个框架或收款系统。     
+3:可用性高：本框架长期可用，稳定性100%可用，长期有团队维护，截止更新日期目前有479个商家使用本框架集成USDT插件进行收款或钱包开发。    
 4:完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
+5:涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持Python\JAVA\NodeJs\PHP\GO\Ruby\C#\火山易语言等众多编程语言。    
 
-# More Language (多语言阅读本文文档)
+# More Language 
 [English Version A(英文A版本)](https://github.com/minknown/usdtpay/)    
 [English Version B(英文B版本)](./README_English.md)   
 [Arabic(Legha Al-arabia)](./README_Arabic.md)[اللغة العربية]       
@@ -28,9 +30,6 @@ At present, the PHP source code is provided, which is the payui.exe file on this
 The following USDT refers to USDT in the form of USTD-TRC20. TRX coin and USDT share the same receiving address.  
 If you are a user from the United States and Europe, we recommend that you use web translation to read this document.  
 All interfaces must be accessed through POST, otherwise it is likely to prompt for missing parameters.  thank you!
-
-(新增回调安全，paycheck接口访问时，在auto=回调模式时，返回的jump为源回调域名后payok.php，而不是原来的回调URL，确保回调地址不被客户用户看到。但实际不影响回调URL，请到订单后台可看到真实回调网址)     
-(2025年12月17日更新：新增界面皮肤，支付页可以自己写，也可以用我们的，支持多款皮肤，在订单后台切换即可，无需编写代码，) 
 
 
 ### 快速测试收款效果:
@@ -103,8 +102,9 @@ auto=no时jump为页面跳转地址，如果auto为yes或async时，jump通常�
 ### 我不会任何一门编程语言，怎么构建自己的收款系统？
  
 如果您连一门编程语言都不会，也没关系，有两种解决方法：  
-+ 第一种将本页的内容和接口拿给某个程序员看，他也能快速构建出一个收款系统，对编程技能并不要求很高。开发成本非常低  
-+ 第二种就是使用我们的已有的系统，https://tronusdt.xyz/?way=payui.php?name=.... 拼接您的收款链接，发送给别人进行支付即可。
++ 第一种将本页的内容和接口拿给某个程序员看，他也能快速构建出一个收款系统，对编程技能并不要求很高。开发成本非常低。
++ 第二种就是底部邮箱联系我免费帮接入，需要自备服务器，未自卑需要额外付费感谢理解。
++ 第三种就是使用我们的已有的系统，https://tronusdt.xyz/?way=payui.php?name=.... 拼接您的收款链接，发送给别人进行支付即可。
 
 --------------------------
 
@@ -196,10 +196,10 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 ***请提醒用户按要求进行支付，关于确认支付成功的标准，当创建了一个8USDT的支付订单，调用way=pay返回value=8 USDT，则商家的USDT钱包收到 [8.0(含)到8.5(不含8.5)]个USDT，则此用户的订单会被标记为支付成功。当创建了一个10USDT的支付订单，由于10这个数额被同一时段其他用户占用，则调用way=pay会返回value=10.5 USDT，则商家的USDT钱包收到 [10.5(含)到11.0(不含11.0)]个USDT，则此用户的订单会被标记为支付成功。***      
 
 #### 返回的headlist是什么 
-在调用检查支付订单way=paycheck时返回的 headlist表示该钱包前5个最新的交易记录，注意如果订单状态为支付成功（status=1），则不显示 headlist。 headlist作为调试使用。如果 headlist有显示转账交易，表示数字货币在区块链公共平台上时入账入币了。     
+在调用检查支付订单way=paycheck时返回的 headlist表示该钱包前5个最新的交易记录，注意如果订单状态为支付成功（status=1），则不显示 headlist。 headlist作为调试使用。如果 headlist有显示转账交易，表示数字货币在区块链公共平台上时入账入币了。  
 
-#### 电报版本（Telegram Version） 
-电报机器人Telegram版本可联系我索要源码。  
+#### 回调地址变换说明？ 
+(新增回调安全，paycheck接口访问时，在auto=回调模式时，返回的jump为源回调域名后payok.php，而不是原来的回调URL，确保回调地址不被客户用户看到。但实际不影响回调URL，请到订单后台可看到真实回调网址)     
 
 #### 域名被墙怎么办（Domain access error...）
 目前我们的域名在美国、日本、韩国、新加坡、非洲、中国等地均能访问，如果访问不了请通过本页底部邮件联系我们获取最新的域名。或者如果只是中国大陆无法访问，请使用代理解决即可。。   
@@ -208,11 +208,9 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 #### 其他功能和API（Need other...）?
 如果上述接口没有满足您的需求，可以访问下述TRON的官方提供API开放文档自行开发接入。承接区块链系统开发、收款开发、功能建议、BUG反馈，可电子邮件联系我。
 >https://tron.network  
->Email:usdtadmin@protonmail.com  
->USDT赞助打赏:TJgooLjpQkZmxW1jgjscT8sCy7xaT4t8ZG
-
-**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过本页底部的邮箱联系我们即可，感谢理解哈呢)   **  
-**(其实看本文档和视频就能自行接入了，不会的底部邮箱联系我免费帮指导接入) **    
+>Email:https://tronusdt.xyz/?way=help  
+**(如果有任何问题不要通过本帖子私聊、留言评论，很大可能不会有回复，请通过页面的的邮箱联系我们即可，感谢理解哈呢)   **  
+ 
 
 #### 免责声明（Disclaimer）
 1. tornusdt为USDT官方开源的API产品，仅用于学习交流使用！  
