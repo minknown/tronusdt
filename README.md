@@ -72,7 +72,7 @@ URL访问以创建支付订单：
 
 ### auto参数自动回调介绍：    
 **** auto总共有3个值可选，分别是no、yes和async，如果auto为空不传，则默认为no。****    
->auto参数视频讲解：https://tronusdt.xyz/?way=video&video=async.mp4    
+>auto参数视频讲解：[https://tronusdt.xyz/?way=video&video=async.mp4](https://tronusdtemp.xyz/video.php?name=async)        
 
 ##### (1)auto=no模式     
 此模式最开始的模式。创建订单后，用户需要手动点击支付界面上的[我已经支付]按钮去发起ajax请求检查订单是否支付成功，如果成功则页面发生jump跳转。   如果用户没有点击，支付页面如果还没有关闭的话，后台默认也会每隔几秒自动发起ajax请求调用[我已经支付]按钮事件。其本质是调用way=paycheck接口去主动检查订单是否支付。.        
@@ -174,7 +174,7 @@ way=pay创建成功会返回一个qrcode的字段，它代表一个收款二维�
 如果没有绑定，请打开 https://tronusdt.xyz/?way=bind 选择币安后填写几个参数即可绑定。   
 绑定所需参数：您的联系邮箱（用于通知和查看支付订单等）、USDT钱包地址（这个必须和币安上USDT-TRC20网络的收款地址一样）、Key和密钥（在您的币安后台创建得到）。   
 您可以通过币安官网的教程了解如何获取key和密钥:https://www.binance.com/zh-CN/support/faq/detail/360002502072   
-您可以通过视频了解币安KEY的教程：https://tronusdt.xyz/?way=video&video=biankey.mp4    
+您可以通过视频了解币安KEY的教程：https://tronusdtemp.xyz/video.php?name=biankey    
 
 ##### 绑定时填写key和密钥给你们，那么安全吗？  
 新建的key和密钥默认只能读取账户内的基础数据，并不能进行币安账户进行合约、投资、转账等其他风险操作。我们仅通过key和密钥访问您的币安账户的USDT充值数据列表。我们没有权限可以去操控您的币安其他操作，因为币安的Key默认权限只能读取账户基础数据，没有划转、转账、交易等权限，除非您在API管理的后台给这个Key开启打勾上这些权限。这些都是币安API管理策略和币安官方帮助文档提到的。如果您依旧不放心，可以使用一个闲置的币安账户作为收款账户。        
