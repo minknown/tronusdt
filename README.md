@@ -13,7 +13,7 @@
 
 # 支持皮肤
 内置超过15+款可选支付页皮肤，也可以自己编写HTML代码自行设计页面。
-![skins.png](./images/skins.png)  
+![skins.gif](./images/skins.gif)  
 
 # 多语言阅读（More Language ）   
 [English Version A(英文A版本)](https://github.com/minknown/usdtpay/)    
