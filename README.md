@@ -11,8 +11,8 @@
 5:支持站内：完美兼容币安的链下USDT转账交易。这种交易0手续费且到账秒到，完全无需区块链确认。即用户和商家的USDT地址都为币安旗下。这是目前市面上所有USDT框架中本框架首创兼容(Support Binance internal transactions of USDT)。    
 6:兼容性高：涵盖交易查询\转币转账\收款回调等常用的Web接口API。支持网站、APP、小程序，移动端和PC。编程语言PHP、Java、Python、Go、Node等全部支持。    
 
-# 支持皮肤
-内置超过15+款可选支付页皮肤，也可以自己编写HTML代码自行设计页面。      
+# 支持多皮肤界面
+内置超过15+款可选支付页皮肤,尾部可自定义代码元素，也可以自己编写HTML代码自行设计页面。      
 ![skins.gif](./images/skins.gif)  
 
 # 多语言阅读（More Language ）   
