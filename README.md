@@ -1,9 +1,10 @@
 # tronusdt
 用于快速为您的网站或APP接入USDT钱包功能或USDT收款功能，而无需任何区块链知识，只要会发起HTTP请求，就能对接成功，整个框架的设计宗旨是让每个人，任何编程语言都仅需要5分钟即可完成所有接入。   
-此框架由波场创始人孙晨宇旗下的torn.network的子建业项目，由国人Dtjasan团队长期维护，属于公益项目，长期免费。     
+此框架由波场创始人孙晨宇旗下的tron.network的子建业项目，由国人Dyjasan团队长期终身维护，属于公益项目，长期免费。     
 项目官网：https://tronusdt.xyz   
 视频教程：https://tronusdt.xyz?way=videot   
 支持独角数卡接入：https://tronusdtemp.xyz/video.php?name=dujiaotronusdt    
+用户隐私政策协议：https://tronusdtemp.xyz/help.php?bottom=yes （使用确保匿名性问题）    
 
 # 框架优势
 1:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。    
