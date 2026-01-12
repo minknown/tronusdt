@@ -4,7 +4,8 @@
 项目官网：https://tronusdt.xyz   
 视频教程：https://tronusdt.xyz?way=videot   
 支持独角数卡接入：https://tronusdtemp.xyz/video.php?name=dujiaotronusdt    
-（前27分钟在讲如何安卓独角数卡商店的内容，实际对接USDT支付请跳到27分钟后，对接USDT教程仅为15分钟，体验极速简易接入）     
+（视频前27分钟在讲《如何安装独角数卡商店》，实际对接USDT支付请跳到27分钟后到结尾，对接USDT的教程总时长仅为15分钟，体验极速简易接入）      
+电报Telegram收款版本：请见视频教程。    
 
 # 框架优势
 1:零学习成本：无需懂任何区块链知识和技术，无需查看其他数字货币API开发文档。通过本页几个接口的调用即可制作USDT钱包功能，或给您的网站APP继承USDT收款功能。非常方便(No need to have any knowledge of blockchain)。    
