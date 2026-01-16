@@ -5,8 +5,8 @@
 视频教程：https://tronusdt.xyz?way=videot   
 电报Telegram收款版本：在电报搭建一个自动销售系统，支援USDT支付，请见档期内的视频教程。    
 支持独角数卡接入：
-USDT对接教程（含独角数卡商城安装视频教程）：https://tronusdtemp.xyz/video.php?name=dujiaotronusdt     
-USDT对接教程（不含独角数卡商城安装视频教程）https://tronusdtemp.xyz/video.php?name=dujiaotronusdtal     
+USDT对接教程（含独角数卡商城安装视频教程）[50分钟左右]：https://tronusdtemp.xyz/video.php?name=dujiaotronusdt     
+USDT对接教程（不含独角数卡商城安装视频教程）[15分钟左右]：https://tronusdtemp.xyz/video.php?name=dujiaotronusdtal     
 
 
 # 框架优势
